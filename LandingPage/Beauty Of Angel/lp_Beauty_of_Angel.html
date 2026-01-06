@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty of Angel | Collagen Toner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4a5c3;
+            --primary-light: #f0d8e5;
+            --primary-dark: #b87ca6;
+            --secondary: #9ec9d6;
+            --dark: #333333;
+            --light: #f9f5f8;
+            --white: #ffffff;
+            --gray: #888888;
+            --transition: all 0.4s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+            bottom: -15px;
+            left: 15%;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(212, 165, 195, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 165, 195, 0.4);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-dark);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            background: linear-gradient(135deg, rgba(212, 165, 195, 0.1) 0%, rgba(158, 201, 214, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            max-width: 450px;
+            width: 100%;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+            border-radius: 20px;
+        }
+
+        .badges {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge i {
+            color: var(--secondary);
+        }
+
+        /* Problem Section */
+        .problem {
+            background-color: var(--white);
+        }
+
+        .problem-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .problem-card {
+            background-color: var(--light);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .problem-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        /* Solution Section */
+        .solution {
+            background: linear-gradient(135deg, rgba(212, 165, 195, 0.05) 0%, rgba(158, 201, 214, 0.05) 100%);
+        }
+
+        .solution-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .solution-content.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .solution-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .solution-image img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .solution-text {
+            flex: 1;
+        }
+
+        .solution-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .ingredients {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .ingredient-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ingredient-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .ingredient-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        /* Process Section */
+.process {
+    background-color: var(--white);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Paksa 2 kolom pada layar besar untuk 2x2 */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Responsif untuk kolom proses agar tidak menyisakan ruang kosong */
+@media (max-width: 992px) {
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .process-steps {
+        grid-template-columns: 1fr; /* Satu kolom di mobile kecil */
+    }
+}
+
+.process-step {
+    background-color: var(--light);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.step-visual {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.step-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.step-image {
+    width: 100%;
+    height: 100%;
+}
+
+.step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.process-step:hover .step-image img {
+    transform: scale(1.05);
+}
+
+.step-content {
+    padding: 25px;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.step-content h3::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Process Summary */
+.process-summary {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 60px;
+    background-color: var(--light);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.summary-content {
+    flex: 1;
+}
+
+.summary-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+
+.summary-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.summary-points {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.point i {
+    color: var(--primary);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.point span {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.summary-image {
+    flex: 1;
+    text-align: center;
+}
+
+.summary-image img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Perbaikan untuk teks tertutup garis pada section title */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    display: inline-block;
+    position: relative;
+    padding-bottom: 25px; /* Menambahkan padding agar garis tidak menempel dengan teks */
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    bottom: 0; /* Diubah dari -15px menjadi 0 agar sesuai dengan padding bottom */
+    left: 15%;
+    border-radius: 2px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: 20px auto 0;
+    font-size: 1.1rem;
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* Responsive adjustments for process section */
+@media (max-width: 992px) {
+    .process-summary {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .summary-content,
+    .summary-image {
+        width: 100%;
+    }
+    
+    .summary-points {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .process-summary {
+        padding: 30px 25px;
+    }
+    
+    .summary-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .process-step {
+        margin-bottom: 20px;
+    }
+    
+    .step-visual {
+        height: 180px;
+    }
+    
+    .process-summary {
+        padding: 25px 20px;
+    }
+}
+
+        /* Gallery Section */
+        .gallery {
+            background-color: var(--white);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 300px;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, rgba(212, 165, 195, 0.05) 0%, rgba(158, 201, 214, 0.05) 100%);
+        }
+
+        .testimonial-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 3px solid var(--primary-light);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary-dark);
+        }
+
+        .testimonial-info .stars {
+            color: #FFD700;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .testimonial-date {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-align: right;
+        }
+
+        /* Result Section */
+        .result {
+            background-color: var(--white);
+        }
+
+        .result-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--light);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            color: white;
+        }
+
+        .stat-card:hover .stat-number,
+        .stat-card:hover .stat-title {
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-title {
+            font-size: 1.2rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to right, var(--primary-light), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .benefit-text h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        /* Routine Section */
+        .routine {
+            background: linear-gradient(135deg, rgba(212, 165, 195, 0.05) 0%, rgba(158, 201, 214, 0.05) 100%);
+        }
+
+        .routine-cards {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .routine-card {
+            background-color: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 300px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .routine-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .routine-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary-dark);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .routine-title::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .routine-steps {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        .step {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--primary-dark);
+            flex-shrink: 0;
+        }
+
+        /* Trust Section */
+        .trust {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .trust-badge {
+            background-color: var(--light);
+            padding: 25px;
+            border-radius: var(--radius);
+            width: 180px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .trust-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .trust-badge i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .trust-badge h4 {
+            color: var(--primary-dark);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 30px 0;
+            display: inline-block;
+        }
+
+        .price span {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-left: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--primary-light);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary-light);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-contact i {
+            color: var(--primary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Sticky Buy Button */
+        .sticky-buy {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        .sticky-buy .btn {
+            padding: 16px 35px;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(212, 165, 195, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 165, 195, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(212, 165, 195, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 165, 195, 0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero .container,
+            .solution-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin-bottom: 50px;
+            }
+
+            .solution-image,
+            .solution-text {
+                width: 100%;
+            }
+
+            .solution-content.reverse {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                gap: 12px;
+            }
+            
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .routine-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .routine-card {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            /* Navigation for mobile */
+            .nav-links {
+                display: flex;
+                overflow-x: auto;
+                padding-bottom: 5px;
+                gap: 10px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Firefox */
+            }
+            
+            .nav-links::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
+            
+            .nav-links a {
+                font-size: 0.85rem;
+                padding: 5px 10px;
+                background-color: var(--light);
+                border-radius: 20px;
+                white-space: nowrap;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .badges {
+                justify-content: center;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .cta h2 {
+                font-size: 2.2rem;
+            }
+
+            .price {
+                font-size: 2.8rem;
+            }
+
+            .sticky-buy {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .testimonial-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-text">Beauty<span>of</span>Angel</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Beauty of Angel<br>Collagen Toner</h1>
+                <p>Transformasi kulit wajah Anda dengan toner collagen yang diformulasikan khusus dengan ekstrak aloe vera, niacinamide, dan salicylic acid untuk kulit yang lebih cerah, lembab, dan bebas noda.</p>
+                <a href="#buy" class="btn">Dapatkan Sekarang</a>
+                
+                <div class="badges">
+                    <div class="badge"><i class="fas fa-check-circle"></i> HALAL</div>
+                    <div class="badge"><i class="fas fa-certificate"></i> BADAN POM</div>
+                    <div class="badge"><i class="fas fa-leaf"></i> Natural Ingredients</div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="aset/id-11134207-7qukw-lgkggu7eb0dk14.webp">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="section-title">
+                <h2>Masalah Kulit Wajah Anda</h2>
+            </div>
+            <div class="problem-items">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Kulit Kering & Dehidrasi</h3>
+                    <p>Kulit terasa kencang, kering, dan kehilangan kelembaban alami sepanjang hari.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Kusam & Tidak Bercahaya</h3>
+                    <p>Kulit terlihat kusam, tidak segar, dan kehilangan cahaya alaminya.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Peradangan & Jerawat</h3>
+                    <p>Kulit mudah mengalami iritasi, kemerahan, dan berjerawat akibat peradangan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <div class="section-title">
+                <h2>Solusi Dari Beauty of Angel</h2>
+            </div>
+            
+            <div class="solution-content">
+                <div class="solution-image">
+                    <img src="aset/2.webp">
+                </div>
+                <div class="solution-text">
+                    <h3>Collagen Toner dengan Formula Terbaik</h3>
+                    <p>Beauty of Angel Collagen Toner diformulasikan khusus dengan bahan-bahan aktif pilihan yang bekerja sinergis untuk mengatasi masalah kulit Anda secara menyeluruh.</p>
+                    <p>Toner ini tidak hanya membersihkan sisa kotoran dan makeup, tetapi juga memberikan nutrisi yang dibutuhkan kulit untuk tampak lebih cerah, lembut, dan sehat.</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <h4>Tekstur: Cair Ringan</h4>
+                        <p>Tekstur yang ringan dan mudah meresap, tidak lengket, cocok untuk semua jenis kulit.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ingredients">
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Aloe Vera Extract</h4>
+                    <p>Melembapkan dan menutrisi kulit, mencegah peradangan, serta menenangkan kulit yang iritasi.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h4>Niacinamide</h4>
+                    <p>Membantu mengatasi kerutan dan garis halus, menguatkan skin barrier, dan melembabkan kulit.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>Salicylic Acid</h4>
+                    <p>Meningkatkan penyerapan produk perawatan kulit, membersihkan pori-pori, dan mengurangi jerawat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Kerja Produk Section - DIPERBAIKI -->
+<!-- Process Section -->
+<section class="process" id="process">
+    <div class="container">
+        <div class="section-title">
+            <h2>Proses Kerja Produk</h2>
+            <p>Beauty of Angel Collagen Toner bekerja dalam 4 tahap penting untuk memberikan hasil maksimal pada kulit wajah Anda.</p>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-visual">
+                    <div class="step-number">1</div>
+                    <div class="step-image">
+                        <img src="aset/proc3.webp" alt="Membersihkan kulit">
+                    </div>
+                </div>
+                <div class="step-content">
+                    <h3>Membersihkan</h3>
+                    <p>Menghilangkan sisa-sisa kotoran dan make-up yang masih tertinggal setelah proses pembersihan pertama.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-visual">
+                    <div class="step-number">2</div>
+                    <div class="step-image">
+                        <img src="aset/proc2.webp" alt="Melembabkan kulit">
+                    </div>
+                </div>
+                <div class="step-content">
+                    <h3>Melembabkan</h3>
+                    <p>Melembabkan dan menghaluskan kulit dengan formula hydrating yang cepat meresap tanpa meninggalkan rasa lengket.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-visual">
+                    <div class="step-number">3</div>
+                    <div class="step-image">
+                        <img src="aset/proc4.webp" alt="Menyeimbangkan pH kulit">
+                    </div>
+                </div>
+                <div class="step-content">
+                    <h3>Menyeimbangkan</h3>
+                    <p>Mengembalikan pH alami kulit untuk menciptakan lingkungan optimal bagi kesehatan kulit dan meningkatkan efektivitas produk skincare berikutnya.</p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-visual">
+                    <div class="step-number">4</div>
+                    <div class="step-image">
+                        <img src="aset/proc1.webp" alt="Memperbaiki kulit">
+                    </div>
+                </div>
+                <div class="step-content">
+                    <h3>Memperbaiki</h3>
+                    <p>Mengurangi tanda penuaan dengan merangsang produksi kolagen, memperbaiki tekstur kulit, dan memberikan efek glowing alami.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="process-summary">
+            <div class="summary-content">
+                <h3>Bagaimana Collagen Toner Bekerja?</h3>
+                <p>Beauty of Angel Collagen Toner bekerja secara sinergis melalui 4 tahap penting untuk memberikan hasil optimal pada kulit wajah Anda. Setiap tahap saling mendukung untuk menciptakan kulit yang sehat, cerah, dan bercahaya alami.</p>
+                
+                <div class="summary-points">
+                    <div class="point">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Membersihkan secara mendalam tanpa mengikis kelembaban alami kulit</span>
+                    </div>
+                    <div class="point">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Memberikan hidrasi intensif dengan tekstur ringan yang cepat meresap</span>
+                    </div>
+                    <div class="point">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mengembalikan keseimbangan pH kulit untuk pertahanan optimal</span>
+                    </div>
+                    <div class="point">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Merangsang produksi kolagen alami untuk kulit lebih kenyal dan awet muda</span>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-image">
+                <img src="aset/id-11134207-7qul0-lgkggu7e9lt4e6.webp" alt="Beauty of Angel Collagen Toner">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeri Produk</h2>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="aset/rsz_boa-toner-08469_1 (1).webp">
+                    <div class="gallery-caption">Beauty of Angel Collagen Toner 150ml</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="aset/BOA-Toner-08470.webp">
+                    <div class="gallery-caption">Kemasan Elegan dengan Desain Modern</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="aset/rsz_boa-toner-08469_1 (1).webp">
+                    <div class="gallery-caption">Tekstur Cair Ringan Mudah Meresap</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimoni Pengguna</h2>
+            </div>
+            
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Diana Sari">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Diana Sari</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        "Skin jadi glowing banget setelah pakai Beauty of Angel Collagen Toner! Kulit yang tadinya kusam sekarang terlihat cerah dan sehat. Teksturnya ringan banget, cepat meresap, dan nggak bikin lengket. Pokoknya wajib punya!"
+                    </div>
+                    <div class="testimonial-date">28 Juni 2023</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Rina Wijaya">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Rina Wijaya</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        "Jerawat dan bekasnya berkurang drastis setelah rutin pakai toner ini. Aku punya kulit sensitif dan cenderung berminyak, tapi toner ini cocok banget. Nggak bikin iritasi dan membantu menyeimbangkan minyak di wajah. Recommended!"
+                    </div>
+                    <div class="testimonial-date">15 Juli 2023</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Maya Dewi">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Maya Dewi</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        "Kulitku yang kering sekarang jadi lebih lembab dan kenyal. Aplikasinya juga mudah, tinggal tuang ke kapas lalu usap ke wajah. Wanginya segar dan nggak menyengat. Sudah habis 2 botol dan akan terus beli lagi!"
+                    </div>
+                    <div class="testimonial-date">5 Agustus 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section class="result" id="result">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hasil yang Akan Anda Dapatkan</h2>
+            </div>
+            
+            <div class="result-stats">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-title">Kulit Terhidrasi</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-title">Kulit Lebih Cerah</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-title">PH Kulit Seimbang</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-title">Reduksi Jerawat</div>
+                </div>
+            </div>
+            
+            <div class="benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h4>Menghidrasi Kulit Wajah</h4>
+                        <p>Mengurangi bekas jerawat sekaligus mencerahkan kulit. Melembapkan dan menghaluskan tekstur kulit.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h4>Mengembalikan PH Alami</h4>
+                        <p>Mengembalikan keseimbangan pH kulit wajah dan meningkatkan produksi kolagen alami pada kulit.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h4>Perlindungan Optimal</h4>
+                        <p>Melindungi kulit dari radikal bebas, mengurangi tanda penuaan, dan menguatkan skin barrier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Routine Section -->
+    <section class="routine" id="routine">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cara Penggunaan</h2>
+            </div>
+            
+            <div class="routine-cards">
+                <div class="routine-card">
+                    <h3 class="routine-title">Rutin Pagi</h3>
+                    <div class="routine-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Tuangkan sedikit Collagen Toner pada kapas atau tangan</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Usapkan toner dengan lembut pada wajah</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Biarkan 1-2 menit sampai toner meresap ke kulit</div>
+                        </div>
+                    </div>
+                    <p>Gunakan sebagai awal rangkaian skincare pagi hari sebelum serum dan sunscreen.</p>
+                </div>
+                
+                <div class="routine-card">
+                    <h3 class="routine-title">Rutin Malam</h3>
+                    <div class="routine-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Bersihkan wajah terlebih dahulu dengan pembersih</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Aplikasikan toner ke seluruh wajah dan leher</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Lanjutkan dengan serum dan moisturizer</div>
+                        </div>
+                    </div>
+                    <p>Gunakan setiap malam untuk membantu regenerasi kulit selama tidur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <div class="section-title">
+                <h2>Terpercaya & Terjamin</h2>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-star"></i>
+                    <h4>HALAL</h4>
+                    <p>Certified Halal</p>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-award"></i>
+                    <h4>BADAN POM</h4>
+                    <p>Terdaftar BPOM RI</p>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-ban"></i>
+                    <h4>Mercury Free</h4>
+                    <p>Bebas Mercury</p>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>100% Aman</h4>
+                    <p>Dermatologi Tested</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="buy">
+        <div class="container">
+            <h2>Transformasi Kulit Anda Sekarang</h2>
+            <p>Dapatkan Beauty of Angel Collagen Toner dengan formula terbaik untuk kulit yang lebih cerah, lembab, dan sehat hanya dengan sekali klik.</p>
+            
+            <div class="price">
+                Rp 189.000 <span>Rp 329.000</span>
+            </div>
+            
+            <a href="#order" class="btn" id="orderBtn">Pesan Sekarang</a>
+            
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-shipping-fast" style="font-size: 1.5rem;"></i>
+                    <span>Gratis Ongkir</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-undo" style="font-size: 1.5rem;"></i>
+                    <span>Garansi 30 Hari</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-headset" style="font-size: 1.5rem;"></i>
+                    <span>Customer Support 24/7</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Beauty<span>of</span>Angel</div>
+                    <p>Beauty of Angel Official Store menyediakan produk skincare berkualitas tinggi dengan formula terbaik untuk kecantikan kulit wanita Indonesia.</p>
+                    <div class="badges">
+                        <div class="badge" style="background-color: rgba(255,255,255,0.1); color: white;">HALAL</div>
+                        <div class="badge" style="background-color: rgba(255,255,255,0.1); color: white;">BADAN POM</div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#problem">Masalah Kulit</a></li>
+                        <li><a href="#solution">Solusi</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
+                        <li><a href="#testimonials">Testimoni</a></li>
+                        <li><a href="#routine">Cara Pakai</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Kontak Kami</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Official Store Beauty of Angel</p>
+                    <p><i class="fas fa-phone"></i> +62 xxx xxx xxx</p>
+                    <p><i class="fas fa-envelope"></i> info@beautyofangel.com</p>
+                    <p><i class="fas fa-clock"></i> Buka Setiap Hari: 08.00 - 22.00 WIB</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Beauty of Angel Official Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Buy Button -->
+    <div class="sticky-buy">
+        <a href="#buy" class="btn">Beli Sekarang</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Order button click handler
+        document.getElementById('orderBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Anda akan diarahkan ke halaman pemesanan. Produk Beauty of Angel Collagen Toner akan segera diproses.');
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements to animate
+        document.querySelectorAll('.problem-card, .ingredient-card, .benefit-card, .routine-card, .trust-badge, .gallery-item, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if(hero) {
+                hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+            }
+        });
+        
+        // Add active class to nav links on scroll
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

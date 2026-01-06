@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Risiko &amp; Peluang Bisnis - Desember 2025 Bandung</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primitive Color Tokens */
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-brown-600: rgba(94, 82, 64, 1);
+            --color-charcoal-700: rgba(31, 33, 33, 1);
+            --color-charcoal-800: rgba(38, 40, 40, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-300: rgba(50, 184, 198, 1);
+            --color-teal-400: rgba(45, 166, 178, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-teal-800: rgba(41, 150, 161, 1);
+            --color-red-400: rgba(255, 84, 89, 1);
+            --color-red-500: rgba(192, 21, 47, 1);
+            --color-orange-400: rgba(230, 129, 97, 1);
+            --color-orange-500: rgba(168, 75, 47, 1);
+
+            /* Weather-specific colors */
+            --weather-blue: #1E3A8A;
+            --weather-blue-light: #3B82F6;
+            --danger-red: #DC2626;
+            --danger-red-light: #FEE2E2;
+            --success-green: #059669;
+            --success-green-light: #D1FAE5;
+            --warning-amber: #F59E0B;
+            --warning-amber-light: #FEF3C7;
+            --warning-orange: #EA580C;
+
+            /* RGB versions for opacity control */
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            --color-slate-900-rgb: 19, 52, 59;
+            --color-slate-500-rgb: 98, 108, 113;
+            --color-red-500-rgb: 192, 21, 47;
+            --color-red-400-rgb: 255, 84, 89;
+            --color-orange-500-rgb: 168, 75, 47;
+            --color-orange-400-rgb: 230, 129, 97;
+
+            /* Background color tokens (Light Mode) */
+            --color-bg-1: rgba(59, 130, 246, 0.08);
+            --color-bg-2: rgba(245, 158, 11, 0.08);
+            --color-bg-3: rgba(34, 197, 94, 0.08);
+            --color-bg-4: rgba(239, 68, 68, 0.08);
+            --color-bg-5: rgba(147, 51, 234, 0.08);
+            --color-bg-6: rgba(249, 115, 22, 0.08);
+            --color-bg-7: rgba(236, 72, 153, 0.08);
+            --color-bg-8: rgba(6, 182, 212, 0.08);
+
+            /* Semantic Color Tokens (Light Mode) */
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-primary-active: var(--color-teal-700);
+            --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-btn-primary-text: var(--color-cream-50);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+            --color-error: var(--color-red-500);
+            --color-success: var(--color-teal-500);
+            --color-warning: var(--color-orange-500);
+            --color-info: var(--color-slate-500);
+            --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+            --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+            /* Typography */
+            --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-family-heading: 'Poppins', sans-serif;
+            --font-size-xs: 11px;
+            --font-size-sm: 12px;
+            --font-size-base: 14px;
+            --font-size-md: 14px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 20px;
+            --font-size-3xl: 24px;
+            --font-size-4xl: 30px;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 550;
+            --font-weight-bold: 600;
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.5;
+            --letter-spacing-tight: -0.01em;
+
+            /* Spacing */
+            --space-0: 0;
+            --space-1: 1px;
+            --space-2: 2px;
+            --space-4: 4px;
+            --space-6: 6px;
+            --space-8: 8px;
+            --space-10: 10px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-base: 8px;
+            --radius-md: 10px;
+            --radius-lg: 12px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+            /* Animation */
+            --duration-fast: 150ms;
+            --duration-normal: 250ms;
+            --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-gray-400-rgb: 119, 124, 124;
+                --color-teal-300-rgb: 50, 184, 198;
+                --color-gray-300-rgb: 167, 169, 169;
+                --color-gray-200-rgb: 245, 245, 245;
+                --color-bg-1: rgba(29, 78, 216, 0.15);
+                --color-bg-2: rgba(180, 83, 9, 0.15);
+                --color-bg-3: rgba(21, 128, 61, 0.15);
+                --color-bg-4: rgba(185, 28, 28, 0.15);
+                --color-bg-5: rgba(107, 33, 168, 0.15);
+                --color-bg-6: rgba(194, 65, 12, 0.15);
+                --color-bg-7: rgba(190, 24, 93, 0.15);
+                --color-bg-8: rgba(8, 145, 178, 0.15);
+                --color-background: var(--color-charcoal-700);
+                --color-surface: var(--color-charcoal-800);
+                --color-text: var(--color-gray-200);
+                --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+                --color-primary: var(--color-teal-300);
+                --color-primary-hover: var(--color-teal-400);
+                --color-primary-active: var(--color-teal-800);
+                --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+                --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+                --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-error: var(--color-red-400);
+                --color-success: var(--color-teal-300);
+                --color-warning: var(--color-orange-400);
+                --color-info: var(--color-gray-300);
+                --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+                --color-btn-primary-text: var(--color-slate-900);
+                --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+                --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+                --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+                --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: var(--font-size-base);
+            font-family: var(--font-family-base);
+            line-height: var(--line-height-normal);
+            color: var(--color-text);
+            background-color: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            font-family: var(--font-family-heading);
+            font-weight: var(--font-weight-bold);
+            line-height: var(--line-height-tight);
+            color: var(--color-text);
+            letter-spacing: var(--letter-spacing-tight);
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 2rem; }
+        h4 { font-size: 1.5rem; }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--weather-blue);
+            font-family: var(--font-family-heading);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1F2937;
+            font-weight: 500;
+            transition: color var(--duration-normal);
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: #1E3A8A;
+        }
+
+        nav a.active {
+            color: #1E3A8A;
+            border-bottom: 2px solid #1E3A8A;
+            padding-bottom: 2px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #1F2937;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, var(--weather-blue) 0%, #1E40AF 50%, #1F2937 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.3"/><circle cx="20" cy="30" r="1.5" fill="white" opacity="0.3"/><circle cx="80" cy="20" r="1" fill="white" opacity="0.3"/><circle cx="60" cy="50" r="2" fill="white" opacity="0.3"/><circle cx="30" cy="70" r="1" fill="white" opacity="0.3"/><circle cx="90" cy="60" r="1.5" fill="white" opacity="0.3"/></svg>');
+            animation: rain 3s linear infinite;
+        }
+
+        @keyframes rain {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100px); }
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+
+        .hero .target-audience {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+        }
+
+        .zona-merah-badge {
+            display: inline-block;
+            background: var(--danger-red);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-full);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .hero-metric {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .hero-metric:nth-child(1) { animation-delay: 0.2s; }
+        .hero-metric:nth-child(2) { animation-delay: 0.4s; }
+        .hero-metric:nth-child(3) { animation-delay: 0.6s; }
+        .hero-metric:nth-child(4) { animation-delay: 0.8s; }
+
+        .hero-metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-metric-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #6B7280;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Metodologi Section */
+        .metodologi-section {
+            background: linear-gradient(135deg, #F8F9FA 0%, #E5E7EB 100%);
+            border-top: 5px solid var(--weather-blue);
+            border-bottom: 5px solid var(--weather-blue);
+        }
+
+        .metodologi-badge {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .metodologi-badge-text {
+            display: inline-block;
+            background: var(--weather-blue);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.3);
+        }
+
+        .metodologi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+        }
+
+        .metodologi-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--color-border);
+        }
+
+        .metodologi-card h3 {
+            font-size: 1.5rem;
+            color: #1E3A8A;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--weather-blue-light);
+        }
+
+        .data-source-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--color-bg-1);
+            border-radius: var(--radius-base);
+            border-left: 4px solid var(--weather-blue);
+        }
+
+        .data-source-item strong {
+            display: block;
+            color: #1E3A8A;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .data-source-item p {
+            margin: 0.2rem 0;
+            color: #1F2937;
+            line-height: 1.6;
+        }
+
+        /* Executive Summary */
+        .status-banner {
+            background: linear-gradient(135deg, var(--danger-red) 0%, #B91C1C 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3);
+        }
+
+        .status-banner h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .key-findings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .finding-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: var(--radius-base);
+            backdrop-filter: blur(10px);
+        }
+
+        .finding-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .finding-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .objective-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-left: 5px solid var(--weather-blue);
+            transition: transform var(--duration-normal);
+        }
+
+        .objective-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .objective-card h4 {
+            color: #1E3A8A;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .objective-card p {
+            color: #1F2937;
+            line-height: 1.6;
+        }
+
+        /* Risk Section */
+        .risk-section {
+            background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+        }
+
+        .risk-section .section-header h2 {
+            color: #DC2626;
+        }
+
+        .risk-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 3rem;
+            border: 3px solid var(--danger-red);
+        }
+
+        .risk-category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .risk-category-title {
+            font-size: 1.8rem;
+            color: #DC2626;
+        }
+
+        .impact-badge {
+            background: var(--danger-red);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+        }
+
+        .risk-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .risk-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 2px solid var(--danger-red-light);
+            transition: transform var(--duration-normal);
+        }
+
+        .risk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .risk-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .risk-business-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #111827;
+            flex: 1;
+        }
+
+        .failure-rate-badge {
+            background: var(--danger-red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.1rem;
+            white-space: nowrap;
+        }
+
+        .failure-rate-badge.orange {
+            background: var(--warning-orange);
+        }
+
+        .risk-explanation {
+            color: #374151;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .risk-solution {
+            background: var(--color-bg-3);
+            padding: 1rem;
+            border-radius: var(--radius-base);
+            border-left: 4px solid var(--success-green);
+        }
+
+        .risk-solution strong {
+            color: #059669;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .risk-solution p {
+            color: #1F2937;
+            margin: 0.3rem 0;
+        }
+
+        /* Opportunity Section */
+        .opportunity-section {
+            background: linear-gradient(135deg, var(--success-green-light) 0%, #A7F3D0 100%);
+        }
+
+        .opportunity-section .section-header h2 {
+            color: #059669;
+        }
+
+        .insight-banner {
+            background: linear-gradient(135deg, var(--success-green) 0%, #047857 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(5, 150, 105, 0.3);
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .opportunity-category {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 3rem;
+            border: 3px solid var(--success-green);
+        }
+
+        .opportunity-category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .opportunity-category-title {
+            font-size: 1.8rem;
+            color: #059669;
+        }
+
+        .success-badge {
+            background: var(--success-green);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+        }
+
+        .driver-text {
+            color: #374151;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .opportunity-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .opportunity-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 2px solid var(--success-green-light);
+            transition: transform var(--duration-normal);
+        }
+
+        .opportunity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .opportunity-card-header {
+            margin-bottom: 1rem;
+        }
+
+        .opportunity-business-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.8rem;
+        }
+
+        .revenue-potential {
+            display: inline-block;
+            background: var(--success-green);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-base);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .priority-badge.highest {
+            background: #DC2626;
+            color: white;
+        }
+
+        .priority-badge.high {
+            background: #EA580C;
+            color: white;
+        }
+
+        .priority-badge.medium {
+            background: #F59E0B;
+            color: white;
+        }
+
+        .opportunity-insight {
+            color: #374151;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .opportunity-insight strong {
+            color: #111827;
+        }
+
+        /* Recommendations Section */
+        .recommendations-section {
+            background: var(--color-bg-1);
+        }
+
+        .recommendation-group {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 2rem;
+        }
+
+        .recommendation-group h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1E3A8A;
+        }
+
+        .recommendation-list {
+            list-style: none;
+        }
+
+        .recommendation-list li {
+            padding: 1rem 1rem 1rem 3rem;
+            margin-bottom: 1rem;
+            border-radius: var(--radius-base);
+            position: relative;
+            background: var(--color-bg-2);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #1F2937;
+        }
+
+        .recommendation-list li::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--weather-blue);
+            border-radius: 50%;
+        }
+
+        .recommendation-list li.negative::before {
+            content: '✗';
+            background: none;
+            color: var(--danger-red);
+            font-weight: 700;
+            font-size: 1.2rem;
+            width: auto;
+            height: auto;
+        }
+
+        .recommendation-list li.positive::before {
+            content: '✓';
+            background: none;
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+            width: auto;
+            height: auto;
+        }
+
+        .recommendation-group.high-risk {
+            border-left: 5px solid var(--danger-red);
+        }
+
+        .recommendation-group.high-opportunity {
+            border-left: 5px solid var(--success-green);
+        }
+
+        /* Conclusion Section */
+        .conclusion-section {
+            background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%);
+        }
+
+        .conclusion-list {
+            list-style: none;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .conclusion-list li {
+            background: white;
+            padding: 1.5rem 1.5rem 1.5rem 4rem;
+            margin-bottom: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            border-left: 5px solid var(--weather-blue);
+            color: #1F2937;
+        }
+
+        .conclusion-list li::before {
+            content: '●';
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            color: var(--weather-blue);
+            font-size: 1.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--weather-blue) 0%, #1E40AF 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Chart Containers */
+        .chart-container {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin: 2rem 0;
+        }
+
+        .chart-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1E3A8A;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .chart-placeholder {
+            background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+            border: 2px dashed #D1D5DB;
+            border-radius: var(--radius-base);
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Responsive media */
+        img, svg, picture, video, canvas {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .chart-placeholder::before {
+            content: '📊';
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        .chart-description {
+            color: #374151;
+            line-height: 1.7;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+
+        /* Period Analysis Cards */
+        .period-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .period-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: transform var(--duration-normal);
+        }
+
+        .period-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .period-card.zona-merah {
+            border: 3px solid var(--danger-red);
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(220, 38, 38, 0.1) 100%);
+        }
+
+        .period-card.risiko-tinggi {
+            border: 3px solid var(--warning-orange);
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.05) 0%, rgba(234, 88, 12, 0.1) 100%);
+        }
+
+        .period-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: whitesmoke;
+        }
+
+        .period-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--color-border);
+            color: whitesmoke;
+        }
+
+        .period-stat strong {
+            color: whitesmoke;
+        }
+
+        .period-stat:last-child {
+            border-bottom: none;
+        }
+
+        .period-status {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        .period-status.zona-merah {
+            background: var(--danger-red);
+            color: white;
+        }
+
+        .period-status.risiko-tinggi {
+            background: var(--warning-orange);
+            color: white;
+        }
+
+        /* Key Data Cards */
+        .key-data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .key-data-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--weather-blue);
+        }
+
+        .key-data-label {
+            font-size: 0.9rem;
+            color: #6B7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-data-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1E3A8A;
+        }
+
+        /* Temperature Correlation Box */
+        .correlation-box {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin: 2rem 0;
+            border: 2px solid var(--weather-blue-light);
+        }
+
+        .correlation-box h4 {
+            color: #1E3A8A;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .correlation-item {
+            padding: 1rem;
+            background: var(--color-bg-1);
+            border-radius: var(--radius-base);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--weather-blue);
+        }
+
+        .correlation-item strong {
+            color: #1E3A8A;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .correlation-item p {
+            color: #1F2937;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--weather-blue);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+
+        /* CTA Buttons */ 
+        .cta-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; } 
+        .btn { appearance: none; border: none; cursor: pointer; font-weight: 600; border-radius: 
+            var(--radius-full); padding: 0.9rem 1.4rem; transition: transform 
+            var(--duration-fast) var(--ease-standard), background 
+            var(--duration-fast) var(--ease-standard), box-shadow 
+            var(--duration-fast) var(--ease-standard); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; } 
+            .btn-primary { background: var(--color-primary); color: var(--color-btn-primary-text); box-shadow: 0 10px 20px rgba(var(--color-teal-500-rgb), 0.25); } 
+            .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); box-shadow: 0 12px 24px rgba(var(--color-teal-500-rgb), 0.3); } 
+            .btn-secondary { background: rgba(255, 255, 255, 0.12); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.35); } 
+            .btn-secondary:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.5rem; }
+
+            .hero h1 { font-size: 2.2rem; }
+            .hero .subtitle { font-size: 1.1rem; }
+            .hero-metrics { grid-template-columns: 1fr; }
+            .hero-metric-value { font-size: 2rem; }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .metodologi-grid,
+            .period-grid,
+            .key-data-grid,
+            .risk-cards-grid,
+            .opportunity-cards-grid,
+            .objectives-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 { font-size: 2rem; }
+            .zona-merah-badge { font-size: 1rem; padding: 0.8rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">🌧️ Analisis Cuaca Bisnis</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#metodologi">Metodologi</a></li>
+                <li><a href="#ringkasan">Ringkasan</a></li>
+                <li><a href="#analisis-hujan">Analisis Hujan</a></li>
+                <li><a href="#risiko">Risiko</a></li>
+                <li><a href="#peluang">Peluang</a></li>
+                <li><a href="#rekomendasi">Rekomendasi</a></li>
+                <li><a href="#kesimpulan">Kesimpulan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Analisis Risiko &amp; Peluang Bisnis</h1>
+            <p class="subtitle">Desember 2025 - Bandung (Berdasarkan Data Cuaca)</p>
+            <p class="target-audience">Untuk Analis Bisnis, Event Organizer, Pemilik Usaha</p>
+            <div class="zona-merah-badge">⚠️ ZONA MERAH - Risiko Sangat Tinggi</div>
+            
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <div class="hero-metric-value">97%</div>
+                    <div class="hero-metric-label">Probabilitas Hujan</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="hero-metric-value">174.5 mm</div>
+                    <div class="hero-metric-label">Curah Hujan Maksimum</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="hero-metric-value">30 Tahun</div>
+                    <div class="hero-metric-label">Data Historis (930 hari)</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="hero-metric-value">📊</div>
+                    <div class="hero-metric-label">Data-Driven Analysis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologi Section -->
+    <section class="metodologi-section" id="metodologi">
+        <div class="container">
+            <div class="section-header">
+                <h2>📊 Metodologi &amp; Sumber Data</h2>
+                <p>Transparansi metodologi penelitian untuk kredibilitas analisis</p>
+            </div>
+
+            <div class="metodologi-badge">
+                <span class="metodologi-badge-text">🔬 DATA-DRIVEN ANALYSIS (BUKAN ASUMSI)</span>
+            </div>
+
+            <div class="metodologi-grid">
+                <div class="metodologi-card">
+                    <h3>📁 SUMBER DATA</h3>
+                    <div class="data-source-item">
+                        <strong>Data Historis 30 Tahun (1995-2024)</strong>
+                        <p>• Analisis 930 hari data cuaca historis bulan Desember</p>
+                        <p>• Sumber: Open-Meteo</p>
+                        <p>• Periode: Desember 1995 - Desember 2024</p>
+                    </div>
+                    <div class="data-source-item">
+                        <strong>Data Prakiraan &amp; Berita Resmi (BMKG)</strong>
+                        <p>• Analisis rilis resmi BMKG untuk prakiraan iklim modern</p>
+                        <p>• Konfirmasi: Puncak Musim Hujan</p>
+                        <p>• Status: IOD Negatif terdeteksi</p>
+                    </div>
+                </div>
+
+                <div class="metodologi-card">
+                    <h3>🔬 PENDEKATAN ANALISIS</h3>
+                    <div class="data-source-item">
+                        <strong>Data-Driven Analysis</strong>
+                        <p>• Analisis berbasis data historis 30 tahun</p>
+                        <p>• BUKAN asumsi atau mengira-ngira</p>
+                        <p>• Validasi dengan data prakiraan resmi BMKG</p>
+                    </div>
+                    <div class="data-source-item">
+                        <strong>Metode Statistik</strong>
+                        <p>• Probabilitas berdasarkan frekuensi historis</p>
+                        <p>• Analisis korelasi suhu dan curah hujan</p>
+                        <p>• Identifikasi periode risiko tertinggi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section id="ringkasan">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: #3B82F6;">📋 Ringkasan Eksekutif</h2>
+                <p>Insight kunci dari analisis data cuaca Desember 2025</p>
+            </div>
+
+            <div class="status-banner">
+                <h3>⚠️ ZONA MERAH - Risiko Sangat Tinggi</h3>
+                <div class="key-findings">
+                    <div class="finding-item">
+                        <div class="finding-value">97%</div>
+                        <div class="finding-label">Probabilitas Hujan</div>
+                    </div>
+                    <div class="finding-item">
+                        <div class="finding-value">174.5 mm</div>
+                        <div class="finding-label">Curah Hujan Maksimum</div>
+                    </div>
+                    <div class="finding-item">
+                        <div class="finding-value">Ekstrem</div>
+                        <div class="finding-label">Klasifikasi</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <h4>🎯 Objektif: Mengurangi Risiko</h4>
+                    <p>Mengidentifikasi bisnis dengan tingkat kegagalan 90-97% untuk mitigasi kerugian dan perencanaan alternatif yang tepat waktu.</p>
+                </div>
+                <div class="objective-card">
+                    <h4>💰 Objektif: Mencari Peluang</h4>
+                    <p>Mengidentifikasi bisnis dengan potensi peningkatan revenue hingga +400% untuk maksimalisasi profit di tengah cuaca ekstrem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Analysis Section -->
+    <section id="analisis-hujan">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: #3B82F6;">🌧️ Bagian 1: Analisis Masalah (Data Hujan Desember)</h2>
+                <p>Analisis mendalam pola curah hujan dan suhu Desember 2025</p>
+            </div>
+
+            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #1E3A8A;">📊 Data Kunci</h3>
+            <div class="key-data-grid">
+                <div class="key-data-card">
+                    <div class="key-data-label">Probabilitas Hujan</div>
+                    <div class="key-data-value">~97%</div>
+                    <p style="margin-top: 0.5rem; color: #6B7280; font-size: 0.9rem;">Hampir pasti setiap hari</p>
+                </div>
+                <div class="key-data-card">
+                    <div class="key-data-label">Prakiraan BMKG</div>
+                    <div class="key-data-value" style="font-size: 1.3rem;">Puncak Hujan</div>
+                    <p style="margin-top: 0.5rem; color: #6B7280; font-size: 0.9rem;">IOD Negatif</p>
+                </div>
+                <div class="key-data-card">
+                    <div class="key-data-label">Intensitas Maksimum</div>
+                    <div class="key-data-value">174.5 mm</div>
+                    <p style="margin-top: 0.5rem; color: #6B7280; font-size: 0.9rem;">Kategori ekstrem/bencana</p>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.8rem; margin: 3rem 0 1.5rem; color: #1E3A8A;">📅 Analisis Periode</h3>
+            <div class="period-grid" style="background-color: #111827;">
+                <div class="period-card zona-merah">
+                    <div class="period-title" style="color: whitesmoke;">Periode Risiko Tertinggi</div>
+                    <div class="period-stat">
+                        <span style="color:whitesmoke ;">Tanggal</span>
+                        <strong style="color: white;">1-10 Desember</strong>
+                    </div>
+                    <div class="period-stat">
+                        <span>Curah hujan rata-rata</span>
+                        <strong>14.1 mm/hari</strong>
+                    </div>
+                    <div class="period-stat">
+                        <span>Karakteristik</span>
+                        <strong>Hujan paling deras</strong>
+                    </div>
+                    <div style="text-align: center;">
+                        <span class="period-status zona-merah">⛔ ZONA MERAH</span>
+                    </div>
+                </div>
+
+                <div class="period-card risiko-tinggi">
+                    <div class="period-title">Periode Paling Optimal</div>
+                    <div class="period-stat">
+                        <span>Tanggal</span>
+                        <strong>21-31 Desember</strong>
+                    </div>
+                    <div class="period-stat">
+                        <span>Curah hujan rata-rata</span>
+                        <strong>11.4 mm/hari</strong>
+                    </div>
+                    <div class="period-stat">
+                        <span>Karakteristik</span>
+                        <strong>Relatif lebih baik</strong>
+                    </div>
+                    <div style="text-align: center;">
+                        <span class="period-status risiko-tinggi">⚠️ RISIKO TINGGI (tetap tidak aman)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="correlation-box">
+                <h4>🌡️ Korelasi Suhu</h4>
+                <div class="correlation-item">
+                    <strong>Pattern:</strong>
+                    <p>Hujan lebat (&gt;30mm) hampir selalu terjadi saat suhu dingin (21-22.5°C)</p>
+                </div>
+                <div class="correlation-item">
+                    <strong>Opportunity Window:</strong>
+                    <p>Jika suhu &gt;23.5°C, probabilitas hujan lebat lebih rendah - pantau prakiraan suhu harian untuk window opportunity</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Pola Curah Hujan dan Suhu Harian</h3>
+                <div class="chart-placeholder" style="width: 100%; border: 1px solid #D1D5DB; padding: 0;">
+                    <img src="rainfall_pattern.png" alt="Pola Curah Hujan Harian" class="img-responsive">
+                </div>
+                <p class="chart-description">Curah hujan cenderung tinggi di awal bulan (1-10 Desember) dengan rata-rata 10-19 mm/hari, kemudian menurun secara bertahap. Pola ini konsisten dengan data historis 30 tahun yang menunjukkan awal Desember sebagai periode paling basah.</p>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Hubungan Curah Hujan dan Suhu</h3>
+                <div class="chart-placeholder"><img src="rainfall_temp_scatter.png" alt=""></div>
+                <p class="chart-description">Pola curah hujan tinggi cenderung terjadi pada suhu yang lebih rendah (21-23°C). Scatter plot menunjukkan korelasi negatif antara suhu dan intensitas hujan, mengindikasikan bahwa hari-hari dengan suhu lebih dingin memiliki risiko hujan lebih deras.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Identification Section -->
+    <section class="risk-section" id="risiko">
+        <div class="container">
+            <div class="section-header">
+                <h2>⚠️ Bagian 2: Identifikasi Risiko (Mitigasi Kegagalan)</h2>
+                <p>Bisnis dengan risiko kegagalan tinggi yang memerlukan mitigasi segera</p>
+            </div>
+
+            <div class="risk-category">
+                <div class="risk-category-header">
+                    <h3 class="risk-category-title">KATEGORI RISIKO #1: Bisnis Berbasis Acara &amp; Pariwisata</h3>
+                    <span class="impact-badge">PALING TERPUKUL</span>
+                </div>
+
+                <div class="risk-cards-grid">
+                    <div class="risk-card">
+                        <div class="risk-card-header">
+                            <h4 class="risk-business-name">Penjemuran Hasil Panen &amp; Pengecatan Eksterior</h4>
+                            <span class="failure-rate-badge">97%</span>
+                        </div>
+                        <p class="risk-explanation">Kebutuhan cuaca kering total membuat hampir mustahil berhasil di Desember 2025.</p>
+                        <div class="risk-solution">
+                            <strong>Solusi:</strong>
+                            <p>• Tunda ke musim kemarau (Juni-Agustus 2025)</p>
+                            <p>• Investasi pengering mekanis atau cat quick-dry dengan terpal</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-card">
+                        <div class="risk-card-header">
+                            <h4 class="risk-business-name">Fotografi Outdoor / Prewedding</h4>
+                            <span class="failure-rate-badge">90%</span>
+                        </div>
+                        <p class="risk-explanation">Hanya 10% hari yang cerah - sangat berisiko untuk sesi foto outdoor.</p>
+                        <div class="risk-solution">
+                            <strong>Solusi:</strong>
+                            <p>• Wajib pindah ke studio indoor atau semi-outdoor</p>
+                            <p>• Jadwalkan pagi hari (6-10 pagi)</p>
+                            <p>• Siapkan 3-5 tanggal cadangan</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-card">
+                        <div class="risk-card-header">
+                            <h4 class="risk-business-name">Event Outdoor (Konser, Festival, Pernikahan)</h4>
+                            <span class="failure-rate-badge orange">65%</span>
+                        </div>
+                        <p class="risk-explanation">Dua dari tiga hari mengalami hujan signifikan - risiko pembatalan tinggi.</p>
+                        <div class="risk-solution">
+                            <strong>Solusi:</strong>
+                            <p>• Sangat tidak disarankan - WAJIB pindah ke indoor venue</p>
+                            <p>• Alternatif: Periode 21-31 Des + pagi hari (6-10)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="risk-category">
+                <div class="risk-category-header">
+                    <h3 class="risk-category-title">KATEGORI RISIKO #2: Bisnis Berbasis Mobilitas &amp; Jasa</h3>
+                </div>
+
+                <div class="risk-cards-grid">
+                    <div class="risk-card">
+                        <div class="risk-card-header">
+                            <h4 class="risk-business-name">Jasa Pengiriman (Kurir, Ekspedisi)</h4>
+                        </div>
+                        <p class="risk-explanation"><strong>Risiko:</strong> Keterlambatan massal, kerusakan paket basah, komplain meningkat drastis.</p>
+                        <div class="risk-solution">
+                            <strong>Solusi:</strong>
+                            <p>• Disclaimer keterlambatan 1-2 hari</p>
+                            <p>• Investasi waterproof packaging premium</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-card">
+                        <div class="risk-card-header">
+                            <h4 class="risk-business-name">Konstruksi &amp; Proyek Infrastruktur</h4>
+                        </div>
+                        <p class="risk-explanation"><strong>Risiko:</strong> Keterlambatan proyek, gagal jadwal pengecoran, biaya tambahan signifikan.</p>
+                        <div class="risk-solution">
+                            <strong>Solusi:</strong>
+                            <p>• Hentikan pengecoran pondasi besar</p>
+                            <p>• Fokus pekerjaan interior/finishing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Tingkat Kegagalan Berbagai Kegiatan</h3>
+                <div class="chart-placeholder"><img src="failure_rates_chart.png" alt=""></div>
+                <p class="chart-description">Penjemuran hasil panen dan pengecatan eksterior memiliki risiko tertinggi (97%), diikuti fotografi outdoor (90%), dan event outdoor (65%). Bisnis yang memerlukan cuaca kering total hampir mustahil berhasil di Desember 2025.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunity Section -->
+    <section class="opportunity-section" id="peluang">
+        <div class="container">
+            <div class="section-header">
+                <h2>💚 Bagian 3: Identifikasi Peluang (Adaptasi Bisnis)</h2>
+                <p>Bisnis dengan potensi pertumbuhan tinggi di tengah cuaca ekstrem</p>
+            </div>
+
+            <div class="insight-banner">
+                💡 Insight: Risiko 97% hujan = Orang tinggal di rumah + mencari kenyamanan &amp; keamanan = PELUANG BESAR
+            </div>
+
+            <div class="opportunity-category">
+                <div class="opportunity-category-header">
+                    <h3 class="opportunity-category-title">KATEGORI PELUANG #1: Bisnis Seasonal</h3>
+                    <span class="success-badge">Success Rate: 100%</span>
+                </div>
+                <p class="driver-text">Driver: Kalender (Natal &amp; Tahun Baru), bukan cuaca - cuaca buruk tidak mengurangi demand</p>
+
+                <div class="opportunity-cards-grid">
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Dekorasi Natal</h4>
+                            <div class="revenue-potential">+400%</div>
+                            <div class="priority-badge highest">HIGHEST</div>
+                        </div>
+                        <p class="opportunity-insight">Peak season absolut - cuaca buruk tidak mengurangi demand. Stok harus siap sejak November.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Parsel/Hampers Natal &amp; Tahun Baru</h4>
+                            <div class="revenue-potential">+300%</div>
+                            <div class="priority-badge highest">HIGHEST</div>
+                        </div>
+                        <p class="opportunity-insight">Tradisi gifting tidak terganggu hujan. Persiapan stok dan produksi sejak Oktober.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Kue Kering/Nastar</h4>
+                            <div class="revenue-potential">+250%</div>
+                            <div class="priority-badge high">HIGH</div>
+                        </div>
+                        <p class="opportunity-insight">Demand sangat tinggi menjelang Natal dan Tahun Baru. Mulai produksi awal Desember.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Event Organizer (INDOOR)</h4>
+                            <div class="revenue-potential">+200%</div>
+                            <div class="priority-badge high">HIGH</div>
+                        </div>
+                        <p class="opportunity-insight">Event indoor tetap berjalan lancar. Natalan kantor, gathering perusahaan peak season.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Catering</h4>
+                            <div class="revenue-potential">+180%</div>
+                            <div class="priority-badge medium">MEDIUM</div>
+                        </div>
+                        <p class="opportunity-insight">Acara Natal dan Tahun Baru mendorong permintaan catering naik signifikan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="opportunity-category">
+                <div class="opportunity-category-header">
+                    <h3 class="opportunity-category-title">KATEGORI PELUANG #2: Bisnis Musim Hujan</h3>
+                    <span class="success-badge">Success Rate: 65-97%</span>
+                </div>
+                <p class="driver-text">Driver: Permintaan didorong langsung oleh hujan - semakin deras hujan, semakin tinggi demand</p>
+
+                <div class="opportunity-cards-grid">
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Toko Payung/Jas Hujan/Sepatu Boots</h4>
+                            <div class="revenue-potential">+200%</div>
+                            <div class="priority-badge highest">HIGHEST</div>
+                        </div>
+                        <p class="opportunity-insight"><strong>Insight:</strong> Peak season mutlak, stok harus penuh sejak akhir November.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Jasa Pengiriman Makanan (GoFood/GrabFood)</h4>
+                            <div class="revenue-potential">+100%</div>
+                            <div class="priority-badge high">HIGH</div>
+                        </div>
+                        <p class="opportunity-insight"><strong>Rekomendasi:</strong> Budget iklan 'promo saat hujan', bundling Paket Musim Hujan.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Makanan/Minuman Hangat (Wedang, Bakso, Kopi)</h4>
+                            <div class="revenue-potential">+150%</div>
+                            <div class="priority-badge high">HIGH</div>
+                        </div>
+                        <p class="opportunity-insight"><strong>Success Rate 97%</strong> - Comfort food saat cuaca dingin selalu laris.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Jasa Laundry / Cuci Sepatu</h4>
+                            <div class="revenue-potential">+150%</div>
+                            <div class="priority-badge medium">MEDIUM</div>
+                        </div>
+                        <p class="opportunity-insight"><strong>Rekomendasi:</strong> Tawarkan Layanan Ekspres Kering untuk demand tinggi.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Jasa Waterproofing/Anti Bocor</h4>
+                            <div class="revenue-potential">+150%</div>
+                            <div class="priority-badge medium">MEDIUM</div>
+                        </div>
+                        <p class="opportunity-insight"><strong>Rekomendasi:</strong> Google Ads targeting 'atap bocor' - conversion rate sangat tinggi.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Cinema / Bioskop</h4>
+                            <div class="revenue-potential">+70%</div>
+                            <div class="priority-badge medium">MEDIUM</div>
+                        </div>
+                        <p class="opportunity-insight">Hiburan indoor pilihan utama saat hujan. Promo bundling untuk meningkatkan traffic.</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-card-header">
+                            <h4 class="opportunity-business-name">Cafe / Resto (INDOOR)</h4>
+                            <div class="revenue-potential">+60%</div>
+                            <div class="priority-badge medium">MEDIUM</div>
+                        </div>
+                        <p class="opportunity-insight">Tempat hangout indoor naik signifikan. Menu hangat dan cozy ambiance jadi nilai jual.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Peluang Bisnis Paling Menguntungkan</h3>
+                <div class="chart-placeholder"><img src="business_chart.png" alt=""></div>
+                <p class="chart-description">Bisnis seasonal seperti dekorasi Natal dan hampers memiliki potensi peningkatan revenue hingga 400%, diikuti bisnis musim hujan seperti payung/jas hujan (+200%). Kombinasi calendar-driven dan weather-driven demand menciptakan peluang emas di Desember.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="recommendations-section" id="rekomendasi">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎯 Bagian 4: Rekomendasi Final Strategis</h2>
+                <p>Action plan berdasarkan tipe bisnis dan tingkat risiko</p>
+            </div>
+
+            <div class="recommendation-group high-risk">
+                <h4>⚠️ Untuk Klien Event/Konstruksi (High Risk)</h4>
+                <ul class="recommendation-list">
+                    <li class="negative">SANGAT TIDAK DISARANKAN event outdoor di Desember (Risiko 97%)</li>
+                    <li class="positive">Jika terpaksa: pilih minggu terakhir (21-31 Des) + pagi hari (6-10 pagi)</li>
+                    <li class="positive">Anggaran mitigasi (tenda, venue indoor, asuransi) adalah WAJIB, bukan opsional</li>
+                </ul>
+            </div>
+
+            <div class="recommendation-group high-opportunity">
+                <h4>💚 Untuk Klien Ritel/Restoran (High Opportunity)</h4>
+                <ul class="recommendation-list">
+                    <li class="positive">Maksimalkan bisnis seasonal (Natal, Tahun Baru) - stok penuh sejak November</li>
+                    <li class="positive">Intensifkan bisnis musim hujan: jas hujan, payung, makanan/minuman hangat</li>
+                    <li class="positive">Alihkan budget marketing ke promo delivery (GoFood/GrabFood) - ROI tertinggi</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="conclusion-section" id="kesimpulan">
+        <div class="container">
+            <div class="section-header">
+                <h2>📝 Kesimpulan</h2>
+                <p>Ringkasan key takeaways untuk pengambilan keputusan bisnis</p>
+            </div>
+
+            <ul class="conclusion-list">
+                <li>Zona Merah: Risiko hujan harian ~97% - hampir pasti terjadi setiap hari di Desember 2025 Bandung</li>
+                <li>Tidak Ada Minggu Aman: Minggu terakhir (21-31 Des) relatif lebih baik namun tetap berisiko tinggi</li>
+                <li>Sektor Berisiko Tinggi: Event outdoor, Konstruksi, Fotografi outdoor menghadapi failure rate 65-97%</li>
+                <li>Sektor Peluang Tinggi: Seasonal (+400%), Musim Hujan (+200%), Indoor (+80%) - potensi profit maksimal</li>
+                <li>Kunci Sukses: Antisipasi pergeseran konsumen dari outdoor ke indoor &amp; delivery - adaptasi adalah strategi terbaik</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Siap Menghadapi Desember 2025?</h2>
+            <p>Adaptasi Strategi Bisnis Anda Berdasarkan Data</p>
+        </div>
+
+        <div class="cta-actions">
+            <a class="btn btn-secondary" href="../index.html" title="Kembali ke Halaman Utama">⬅️ Kembali ke Halaman Utama</a>
+            <a class="btn btn-primary" href="weather_business_december.pdf" download title="Unduh versi PDF">⬇️ Unduh PDF</a>
+          </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 600;">🌧️ Analisis Risiko &amp; Peluang Bisnis</p>
+            <p style="opacity: 0.9;">Desember 2025 - Bandung</p>
+            <p style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">Data-Driven Analysis | 30 Tahun Data Historis | Validasi BMKG</p>
+            <p style="opacity: 0.6; font-size: 0.85rem; margin-top: 1rem;">© 2025 - Weather-Based Business Intelligence</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Active navigation highlighting on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function highlightNavigation() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNavigation);
+        highlightNavigation(); // Call on load
+    </script>
+</body>
+</html>

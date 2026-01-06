@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Investasi Properti Indonesia 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">Property Analysis</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#summary" class="nav-link">Summary</a></li>
+                <li><a href="#charts" class="nav-link">Charts</a></li>
+                <li><a href="#insights" class="nav-link">Insights</a></li>
+                <li><a href="#risks" class="nav-link">Risks</a></li>
+                <li><a href="#recommendations" class="nav-link">Strategies</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">ANALISIS INVESTASI PROPERTI<br>INDONESIA 2026</h1>
+            <p class="hero-subtitle fade-in">Studi Kelayakan Multi-Kota dengan Analisis Scenario &amp; Sensitivity</p>
+            
+            <div class="hero-metrics">
+                <div class="metric-card fade-in" style="animation-delay: 0.2s">
+                    <div class="metric-label">NPV</div>
+                    <div class="metric-value positive">Rp 40.1 juta</div>
+                </div>
+                <div class="metric-card fade-in" style="animation-delay: 0.3s">
+                    <div class="metric-label">IRR</div>
+                    <div class="metric-value positive">10.46%</div>
+                </div>
+                <div class="metric-card fade-in" style="animation-delay: 0.4s">
+                    <div class="metric-label">Score</div>
+                    <div class="metric-value warning">4/8</div>
+                </div>
+            </div>
+            
+            <a href="#summary" class="btn-primary fade-in" style="animation-delay: 0.5s">Lihat Analisis</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Data Source Verification Section -->
+    <section class="section data-sources-section" id="data-sources">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Sumber Data Terverifikasi</h2>
+            <p class="section-subtitle scroll-reveal">Analisis ini menggunakan data resmi dan terverifikasi dari institusi kredibel</p>
+            
+            <div class="data-sources-grid">
+                <!-- Primary Data Sources -->
+                <div class="source-card scroll-reveal" style="animation-delay: 0.1s">
+                    <div class="source-icon">🏦</div>
+                    <div class="source-content">
+                        <h4>Bank Indonesia</h4>
+                        <p>IHPR (Indeks Harga Properti Residensial) Q2 2025</p>
+                        <span class="source-badge badge-official">RESMI</span>
+                        <a href="https://www.bi.go.id" target="_blank" class="source-link">bi.go.id →</a>
+                    </div>
+                </div>
+
+                <div class="source-card scroll-reveal" style="animation-delay: 0.15s">
+                    <div class="source-icon">🏛️</div>
+                    <div class="source-content">
+                        <h4>Otoritas Jasa Keuangan (OJK)</h4>
+                        <p>SBDK KPR (Suku Bunga Dasar Kredit) Agustus 2025</p>
+                        <span class="source-badge badge-official">RESMI</span>
+                        <a href="https://ojk.go.id" target="_blank" class="source-link">ojk.go.id →</a>
+                    </div>
+                </div>
+
+                <div class="source-card scroll-reveal" style="animation-delay: 0.2s">
+                    <div class="source-icon">🌍</div>
+                    <div class="source-content">
+                        <h4>Global Property Guide</h4>
+                        <p>Rental Yield &amp; Property Prices Q1 2025</p>
+                        <span class="source-badge badge-verified">VERIFIED</span>
+                        <a href="https://www.globalpropertyguide.com" target="_blank" class="source-link">globalpropertyguide.com →</a>
+                    </div>
+                </div>
+
+                <div class="source-card scroll-reveal" style="animation-delay: 0.25s">
+                    <div class="source-icon">📊</div>
+                    <div class="source-content">
+                        <h4>Cushman &amp; Wakefield</h4>
+                        <p>Jakarta Occupancy Rate Q3 2025</p>
+                        <span class="source-badge badge-verified">RESEARCH</span>
+                        <a href="https://www.cushmanwakefield.com" target="_blank" class="source-link">cushmanwakefield.com →</a>
+                    </div>
+                </div>
+
+                <!-- Secondary Data Sources -->
+                <div class="source-card scroll-reveal" style="animation-delay: 0.3s">
+                    <div class="source-icon">📈</div>
+                    <div class="source-content">
+                        <h4>Trading Economics</h4>
+                        <p>Proyeksi Indeks Harga Properti 2026</p>
+                        <span class="source-badge badge-forecast">FORECAST</span>
+                        <a href="https://tradingeconomics.com/indonesia" target="_blank" class="source-link">tradingeconomics.com →</a>
+                    </div>
+                </div>
+
+                <div class="source-card scroll-reveal" style="animation-delay: 0.35s">
+                    <div class="source-icon">🏠</div>
+                    <div class="source-content">
+                        <h4>Rumah123 &amp; Skorlife</h4>
+                        <p>Biaya Operasional Properti 2025</p>
+                        <span class="source-badge badge-market">MARKET DATA</span>
+                    </div>
+                </div>
+
+                <div class="source-card scroll-reveal" style="animation-delay: 0.4s">
+                    <div class="source-icon">📍</div>
+                    <div class="source-content">
+                        <h4>Estimasi Publik</h4>
+                        <p>Data 4 kota tambahan (Bandung, Medan, Makassar, Yogyakarta)</p>
+                        <span class="source-badge badge-estimated">ESTIMATED</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer Box -->
+            <div class="data-disclaimer scroll-reveal">
+                <div class="disclaimer-icon">⚠️</div>
+                <div class="disclaimer-content">
+                    <p><strong>Data primer (70%)</strong> terverifikasi dari sumber resmi pemerintah dan lembaga riset internasional. <strong>Data sekunder (30%)</strong> berdasarkan estimasi pasar dan survey publik. Investor disarankan melakukan due diligence tambahan sebelum keputusan investasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="section" id="summary">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Executive Summary</h2>
+            
+            <div class="score-card scroll-reveal">
+                <div class="score-header">
+                    <h3>Kelayakan Score</h3>
+                    <div class="score-value">4/8</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-progress="50"></div>
+                </div>
+                <p class="score-note">Conditional Viable - Layak untuk capital appreciation</p>
+            </div>
+
+            <div class="findings-table scroll-reveal">
+                <div class="table-header">
+                    <div>Metrik</div>
+                    <div>Nilai</div>
+                    <div>Benchmark</div>
+                    <div>Status</div>
+                </div>
+                <div class="table-row">
+                    <div>NPV</div>
+                    <div class="value">Rp 40.1 juta</div>
+                    <div>&gt; 0</div>
+                    <div><span class="badge badge-success">✅ LAYAK</span></div>
+                </div>
+                <div class="table-row">
+                    <div>IRR</div>
+                    <div class="value">10.46%</div>
+                    <div>&gt; 10%</div>
+                    <div><span class="badge badge-success">✅ LAYAK</span></div>
+                </div>
+                <div class="table-row">
+                    <div>Cap Rate</div>
+                    <div class="value">4.70%</div>
+                    <div>6.5-9%</div>
+                    <div><span class="badge badge-danger">❌ RENDAH</span></div>
+                </div>
+                <div class="table-row">
+                    <div>DSCR</div>
+                    <div class="value">0.53</div>
+                    <div>≥ 1.25</div>
+                    <div><span class="badge badge-danger">❌ RISIKO</span></div>
+                </div>
+                <div class="table-row">
+                    <div>Cash-on-Cash Y1</div>
+                    <div class="value">-14.16%</div>
+                    <div>&gt; 0%</div>
+                    <div><span class="badge badge-danger">❌ NEGATIF</span></div>
+                </div>
+                <div class="table-row">
+                    <div>Payback Period</div>
+                    <div class="value">&gt; 10 tahun</div>
+                    <div>&lt; 10 tahun</div>
+                    <div><span class="badge badge-warning">⚠️ LAMA</span></div>
+                </div>
+            </div>
+
+            <div class="recommendation-box scroll-reveal">
+                <h4>📌 Rekomendasi Utama</h4>
+                <p>Layak untuk capital appreciation dengan <strong>caveat substantial cash subsidy requirement</strong>. Investor harus siap dengan cash injection Rp 6-9 juta/bulan selama 10 tahun.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts Gallery -->
+    <section class="section section-dark" id="charts">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Chart Gallery</h2>
+            <p class="section-subtitle scroll-reveal">11 Visualisasi Analisis Mendalam</p>
+            
+            <div class="chart-grid">
+                <div class="chart-card scroll-reveal" data-chart="1">
+                    <div class="chart-placeholder" ><img src="01_cashflow_projection.png" alt="">
+                    </div>
+                    <div class="chart-info">
+                        <h4>Proyeksi Cash Flow 10 Tahun</h4>
+                        <p>Visualisasi cash flow negatif Rp 6-9 juta/bulan selama 10 tahun</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="2">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+                        <div class="chart-icon">📈</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>NOI vs Cicilan KPR</h4>
+                        <p>Gap analysis pendapatan vs cicilan menunjukkan subsidi diperlukan</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="3">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
+                        <div class="chart-icon">💹</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Apresiasi Nilai Properti</h4>
+                        <p>Capital gain Rp 900 juta (+41%) dalam 10 tahun</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="4">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                        <div class="chart-icon">🗺️</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Scatter Plot: 8 Kota Indonesia</h4>
+                        <p>Positioning harga vs rental yield untuk 8 kota utama</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="5">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
+                        <div class="chart-icon">📋</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Dashboard Metrik Kelayakan</h4>
+                        <p>6 metrik investasi dengan benchmark visualization</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="6">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);">
+                        <div class="chart-icon">🎯</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Scenario NPV Impact</h4>
+                        <p>Best case +Rp 600M, Worst case -Rp 500M</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="7">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                        <div class="chart-icon">⚠️</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Scenario DSCR Risk</h4>
+                        <p>Bank approval likelihood per skenario</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="8">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <div class="chart-icon">🏆</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Comparative 8 Kota</h4>
+                        <p>Multi-metrik normalized scores comparison</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="9">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
+                        <div class="chart-icon">📊</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Sensitivity Parameter Ranking</h4>
+                        <p>Property appreciation paling berpengaruh terhadap NPV</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="10">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);">
+                        <div class="chart-icon">🔥</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Sensitivity Heatmap</h4>
+                        <p>NPV change visualization per parameter</p>
+                    </div>
+                </div>
+
+                <div class="chart-card scroll-reveal" data-chart="11">
+                    <div class="chart-placeholder" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+                        <div class="chart-icon">🌏</div>
+                    </div>
+                    <div class="chart-info">
+                        <h4>Extended 8 Kota Analysis</h4>
+                        <p>Comprehensive city clustering (Premium, Secondary, Emerging)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Insights -->
+    <section class="section" id="insights">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Key Insights</h2>
+            
+            <div class="insights-grid">
+                <div class="insight-card scroll-reveal" style="animation-delay: 0.1s">
+                    <div class="insight-icon">💰</div>
+                    <h3>Best for Rental Income</h3>
+                    <div class="insight-city">Central Jakarta</div>
+                    <div class="insight-metrics">
+                        <div class="insight-metric">
+                            <span class="label">Cap Rate</span>
+                            <span class="value">8.46%</span>
+                        </div>
+                        <div class="insight-metric">
+                            <span class="label">DSCR</span>
+                            <span class="value">0.90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card scroll-reveal" style="animation-delay: 0.2s">
+                    <div class="insight-icon">⭐</div>
+                    <h3>Best Value</h3>
+                    <div class="insight-city">Yogyakarta</div>
+                    <div class="insight-metrics">
+                        <div class="insight-metric">
+                            <span class="label">Cap Rate</span>
+                            <span class="value">7.81%</span>
+                        </div>
+                        <div class="insight-metric">
+                            <span class="label">ROI</span>
+                            <span class="value">9.58%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-card scroll-reveal" style="animation-delay: 0.3s">
+                    <div class="insight-icon">📈</div>
+                    <h3>Best Capital Gain</h3>
+                    <div class="insight-city">Bali</div>
+                    <div class="insight-metrics">
+                        <div class="insight-metric">
+                            <span class="label">ROI</span>
+                            <span class="value">10.25%</span>
+                        </div>
+                        <div class="insight-metric">
+                            <span class="label">Appreciation</span>
+                            <span class="value">High</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk & Opportunity -->
+    <section class="section section-dark" id="risks">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Risk &amp; Opportunity Analysis</h2>
+            
+            <div class="risk-opportunity-grid">
+                <div class="risk-column scroll-reveal">
+                    <h3 class="column-title risk-title">🚨 Risks</h3>
+                    
+                    <div class="risk-section">
+                        <button class="accordion-header active" data-target="risk-tier1">
+                            <span>Tier 1 - Critical Risks</span>
+                            <span class="accordion-icon">−</span>
+                        </button>
+                        <div class="accordion-content" id="risk-tier1" style="display: block;">
+                            <div class="risk-item">
+                                <span class="risk-badge danger">HIGH</span>
+                                <p>DSCR 0.53 = Bank approval unlikely</p>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-badge danger">HIGH</span>
+                                <p>Negative cash flow Rp 6-9M/month untuk 10 tahun</p>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-badge danger">HIGH</span>
+                                <p>Cap Rate 4.70% terlalu rendah</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="risk-section">
+                        <button class="accordion-header" data-target="risk-tier2">
+                            <span>Tier 2 - Secondary Risks</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content" id="risk-tier2">
+                            <div class="risk-item">
+                                <span class="risk-badge warning">MED</span>
+                                <p>Occupancy sensitivity tinggi</p>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-badge warning">MED</span>
+                                <p>Interest rate exposure</p>
+                            </div>
+                            <div class="risk-item">
+                                <span class="risk-badge warning">MED</span>
+                                <p>Market downturn risk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="opportunity-column scroll-reveal">
+                    <h3 class="column-title opportunity-title">✨ Opportunities</h3>
+                    
+                    <div class="opportunity-section">
+                        <button class="accordion-header active" data-target="opp-tier1">
+                            <span>Tier 1 - Major Opportunities</span>
+                            <span class="accordion-icon">−</span>
+                        </button>
+                        <div class="accordion-content" id="opp-tier1" style="display: block;">
+                            <div class="opportunity-item">
+                                <span class="opportunity-badge success">HIGH</span>
+                                <p>Capital appreciation 3.5-5% per tahun realistic</p>
+                            </div>
+                            <div class="opportunity-item">
+                                <span class="opportunity-badge success">HIGH</span>
+                                <p>Premium brand positioning South Jakarta</p>
+                            </div>
+                            <div class="opportunity-item">
+                                <span class="opportunity-badge success">HIGH</span>
+                                <p>Portfolio diversification benefit</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-section">
+                        <button class="accordion-header" data-target="opp-tier2">
+                            <span>Tier 2 - Secondary Opportunities</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content" id="opp-tier2">
+                            <div class="opportunity-item">
+                                <span class="opportunity-badge info">MED</span>
+                                <p>Market cycle recovery potential</p>
+                            </div>
+                            <div class="opportunity-item">
+                                <span class="opportunity-badge info">MED</span>
+                                <p>Rental growth acceleration jika demand kuat</p>
+                            </div>
+                            <div class="opportunity-item">
+                                <span class="opportunity-badge info">MED</span>
+                                <p>Currency advantage untuk USD investor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decision Tree -->
+    <section class="section" id="decision-tree">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Investment Decision Tree</h2>
+            
+            <div class="decision-tree scroll-reveal">
+                <div class="decision-node start">
+                    <div class="node-content">🎯 START</div>
+                </div>
+                <div class="decision-arrow">↓</div>
+                
+                <div class="decision-node question">
+                    <div class="node-content">Tujuan Investasi?</div>
+                </div>
+                <div class="decision-branches">
+                    <div class="branch">
+                        <div class="branch-label">Cash Flow</div>
+                        <div class="decision-arrow">↓</div>
+                        <div class="decision-node result fail">
+                            <div class="node-content">❌ PASS<br><small>Cash flow negatif</small></div>
+                        </div>
+                    </div>
+                    <div class="branch">
+                        <div class="branch-label">Capital Gain</div>
+                        <div class="decision-arrow">↓</div>
+                        <div class="decision-node question">
+                            <div class="node-content">Budget Subsidi?</div>
+                        </div>
+                        <div class="sub-branches">
+                            <div class="sub-branch">
+                                <div class="branch-label">Tidak Ada</div>
+                                <div class="decision-arrow">↓</div>
+                                <div class="decision-node result fail">
+                                    <div class="node-content">❌ PASS<br><small>Subsidi wajib</small></div>
+                                </div>
+                            </div>
+                            <div class="sub-branch">
+                                <div class="branch-label">Ada (Rp 6-9M/bln)</div>
+                                <div class="decision-arrow">↓</div>
+                                <div class="decision-node result success">
+                                    <div class="node-content">✅ PROCEED<br><small>Layak untuk appreciation</small></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="section section-dark" id="recommendations">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Investment Strategies</h2>
+            <p class="section-subtitle scroll-reveal">3 Recommended Allocation Models</p>
+            
+            <div class="strategies-grid">
+                <div class="strategy-card scroll-reveal" style="animation-delay: 0.1s">
+                    <div class="strategy-header">
+                        <h3>⚡ Aggressive Yield</h3>
+                        <div class="strategy-badge">High Risk</div>
+                    </div>
+                    <div class="strategy-allocation">
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 70%; background: #14b8a6;"></div>
+                            <div class="allocation-label">
+                                <span>Central Jakarta</span>
+                                <span>70%</span>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 30%; background: #f59e0b;"></div>
+                            <div class="allocation-label">
+                                <span>Yogyakarta</span>
+                                <span>30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strategy-target">
+                        <strong>Target:</strong> Positive cash flow from Year 1
+                    </div>
+                </div>
+
+                <div class="strategy-card scroll-reveal" style="animation-delay: 0.2s">
+                    <div class="strategy-header">
+                        <h3>⚖️ Balanced Growth</h3>
+                        <div class="strategy-badge moderate">Moderate Risk</div>
+                    </div>
+                    <div class="strategy-allocation">
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 40%; background: #14b8a6;"></div>
+                            <div class="allocation-label">
+                                <span>Central Jakarta</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 40%; background: #f59e0b;"></div>
+                            <div class="allocation-label">
+                                <span>Yogyakarta</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 20%; background: #8b5cf6;"></div>
+                            <div class="allocation-label">
+                                <span>Bandung</span>
+                                <span>20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strategy-target">
+                        <strong>Target:</strong> Mix cash flow + appreciation
+                    </div>
+                </div>
+
+                <div class="strategy-card scroll-reveal" style="animation-delay: 0.3s">
+                    <div class="strategy-header">
+                        <h3>🛡️ Conservative Appreciation</h3>
+                        <div class="strategy-badge conservative">Low Risk</div>
+                    </div>
+                    <div class="strategy-allocation">
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 50%; background: #3b82f6;"></div>
+                            <div class="allocation-label">
+                                <span>Bali</span>
+                                <span>50%</span>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 30%; background: #f59e0b;"></div>
+                            <div class="allocation-label">
+                                <span>Yogyakarta</span>
+                                <span>30%</span>
+                            </div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-bar" style="width: 20%; background: #10b981;"></div>
+                            <div class="allocation-label">
+                                <span>South Jakarta</span>
+                                <span>20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="strategy-target">
+                        <strong>Target:</strong> Long-term capital gain
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="section" id="conclusion">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Final Conclusion</h2>
+            
+            <div class="conclusion-banner scroll-reveal">
+                <div class="conclusion-rating">
+                    <div class="rating-grade">D+</div>
+                    <div class="rating-text">CONDITIONAL VIABLE</div>
+                    <div class="rating-score">Score: 4/8</div>
+                </div>
+                <div class="conclusion-verdict">
+                    <p>Layak untuk <strong>capital appreciation</strong> dengan caveat <strong>substantial cash subsidy requirement</strong>. Investor harus siap dengan cash injection Rp 6-9 juta/bulan selama 10 tahun.</p>
+                </div>
+            </div>
+
+            <div class="performance-scorecard scroll-reveal">
+                <h3>Performance Scorecard</h3>
+                <div class="scorecard-grid">
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Profitability (NPV/IRR)</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">8/10</span>
+                            <span class="score-grade grade-b">B+</span>
+                        </div>
+                    </div>
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Cash Flow</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">2/10</span>
+                            <span class="score-grade grade-f">F</span>
+                        </div>
+                    </div>
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Financing Feasibility</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">2/10</span>
+                            <span class="score-grade grade-f">F</span>
+                        </div>
+                    </div>
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Rental Yield</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">3/10</span>
+                            <span class="score-grade grade-f">F</span>
+                        </div>
+                    </div>
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Capital Appreciation</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">8/10</span>
+                            <span class="score-grade grade-b">B+</span>
+                        </div>
+                    </div>
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Risk Profile</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">4/10</span>
+                            <span class="score-grade grade-d">D</span>
+                        </div>
+                    </div>
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Diversification Benefit</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">6/10</span>
+                            <span class="score-grade grade-c">C+</span>
+                        </div>
+                    </div>
+                    <div class="scorecard-item">
+                        <div class="scorecard-category">Bank Approval Likelihood</div>
+                        <div class="scorecard-score">
+                            <span class="score-value">2/10</span>
+                            <span class="score-grade grade-f">F</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section scroll-reveal">
+                <h3>Dapatkan Laporan Lengkap</h3>
+                <p>Download full analysis dengan seluruh data, metodologi, dan appendix</p>
+                <button class="btn-primary">Download PDF Report</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Report Information</h4>
+                    <p><strong>Date:</strong> Maret 4, 2025</p>
+                    <p><strong>Period:</strong> 2025-2035 (10 Tahun)</p>
+                    <p><strong>Version:</strong> 1.0</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Data Quality</h4>
+                    <p>Analysis based on market data, government statistics, and industry benchmarks as of November 2025.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p>This analysis is for informational purposes only and does not constitute financial advice. Past performance does not guarantee future results.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Property Investment Analysis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart Modal -->
+    <div class="modal" id="chartModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Chart content will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

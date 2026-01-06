@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Data Analyst &amp; Full-Stack Developer</title>
+    <style>
+        /* Design System Variables */
+        :root {
+            --color-primary-brown: #8B4513;
+            --color-secondary-brown: #A0522D;
+            --color-accent-gold: #D4A574;
+            --color-dark-wood: #3E2723;
+            --color-leather: #654321;
+            --color-cream: #FAEBD7;
+            --color-light-cream: #F5DEB3;
+            --color-copper: #C19A6B;
+            --color-burnt-orange: #D2691E;
+            --color-deep-leather: #5C4033;
+            
+            --font-serif: Georgia, 'Times New Roman', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-cream);
+            background-color: var(--color-dark-wood);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Vintage Texture Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.05) 2px, rgba(0,0,0,.05) 4px);
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.3;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            transition: var(--transition-smooth);
+        }
+
+        nav.scrolled {
+            background: rgba(62, 39, 35, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-accent-gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--color-cream);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent-gold);
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-accent-gold);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-accent-gold);
+            transition: var(--transition-fast);
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        #hero {
+    /* Pastikan full viewport height */
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    
+    /* Pastikan full width */
+    width: 100vw;
+    max-width: 100%;
+    
+    /* Background dengan foto Anda - PERBAIKAN OPACITY */
+    background: 
+        linear-gradient(135deg, 
+            rgba(62, 39, 35, 0.75) 0%,    /* Kurangi dari 0.85 ke 0.75 */
+            rgba(0, 0, 0, 0.6) 100%      /* Kurangi dari 0.7 ke 0.6 */
+        ),
+        url('bgall.webp') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    /* Pusatkan konten dengan flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Reset semua spacing */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    
+    /* Pastikan di atas semua elemen */
+    z-index: 1;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg, 
+        rgba(62, 39, 35, 0.85) 0%, 
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to top, var(--color-dark-wood), transparent);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-family: var(--font-serif);
+    margin-bottom: 0.5rem;
+    color: var(--color-accent-gold);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    line-height: 1.1;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-gold), transparent);
+}
+
+.hero-content .subtitle {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin: 2rem 0 1.5rem;
+    color: var(--color-cream);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    animation: fadeIn 0.8s ease-out 0.3s both;
+    font-family: var(--font-sans);
+    letter-spacing: 1px;
+}
+
+.hero-content .tagline {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 1.5rem auto 2.5rem;
+    color: var(--color-light-cream);
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    animation: fadeIn 0.8s ease-out 0.6s both;
+    font-family: var(--font-sans);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 0.8s ease-out 0.9s both;
+    margin: 2rem 0;
+}
+
+.btn {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-accent-gold), var(--color-burnt-orange));
+    color: var(--color-dark-wood);
+    box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-burnt-orange), var(--color-accent-gold));
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(212, 165, 116, 0.6);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-accent-gold);
+    border: 3px solid var(--color-accent-gold);
+    position: relative;
+}
+
+.btn-outline:hover {
+    background: var(--color-accent-gold);
+    color: var(--color-dark-wood);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(212, 165, 116, 0.4);
+}
+
+.btn-icon {
+    font-size: 1.3em;
+}
+
+.social-icons {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-out 1.2s both;
+}
+
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(212, 165, 116, 0.2);
+    color: var(--color-accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+}
+
+.social-icons a:hover {
+    background: var(--color-accent-gold);
+    color: var(--color-dark-wood);
+    transform: translateY(-8px) rotate(360deg);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.5);
+    border-color: var(--color-accent-gold);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+    opacity: 0.8;
+}
+
+.scroll-indicator::before {
+    content: '⌄';
+    font-size: 3rem;
+    color: var(--color-accent-gold);
+    font-weight: bold;
+    display: block;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Floating elements decoration */
+.floating-element {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.floating-element.code {
+    top: 20%;
+    left: 10%;
+    font-size: 4rem;
+    color: var(--color-accent-gold);
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element.chart {
+    bottom: 20%;
+    right: 10%;
+    font-size: 4rem;
+    color: var(--color-accent-gold);
+    animation: float 8s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #hero {
+        /* Nonaktifkan parallax di mobile */
+        background-attachment: scroll;
+        
+        /* Kurangi padding atas untuk mobile */
+        padding-top: 70px;
+        
+        /* Pastikan fullscreen di mobile */
+        height: 100vh;
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        /* Tambah padding atas ekstra di mobile */
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    /* Pastikan teks tidak ketutup */
+    .hero-content h1 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-accent-gold);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--color-accent-gold), transparent);
+        }
+
+        /* About Section */
+        .about-content {
+            background: rgba(92, 64, 51, 0.6);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid var(--color-copper);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 0 auto;
+            backdrop-filter: blur(5px);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-light-cream);
+            text-align: center;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: url('https://pplx-res.cloudinary.com/image/upload/v1761594135/pplx_project_search_images/d68e68c0dbc15a9812a599f0fcabc58889ee8653.png') center/cover;
+            padding: 2.5rem;
+            border-radius: 10px;
+            border: 3px solid var(--color-copper);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(62, 39, 35, 0.85);
+            z-index: 0;
+        }
+
+        .skill-category > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(212, 165, 116, 0.4);
+        }
+
+        .skill-category h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-accent-gold);
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.8rem;
+            background: rgba(139, 69, 19, 0.4);
+            border-left: 4px solid var(--color-accent-gold);
+            border-radius: 5px;
+            transition: var(--transition-fast);
+            font-size: 1rem;
+        }
+
+        .skill-list li:hover {
+            background: rgba(139, 69, 19, 0.6);
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            background: rgba(101, 67, 33, 0.3);
+        }
+
+/* Popup Gallery Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 15, 10, 0.95);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.popup-overlay.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.popup-container {
+    background: var(--color-deep-leather);
+    border: 3px solid var(--color-copper);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.popup-header {
+    padding: 1.5rem 2rem;
+    background: var(--color-dark-wood);
+    border-bottom: 2px solid var(--color-copper);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-header h3 {
+    color: var(--color-accent-gold);
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.popup-close {
+    background: none;
+    border: none;
+    color: var(--color-accent-gold);
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.popup-close:hover {
+    background: var(--color-accent-gold);
+    color: var(--color-dark-wood);
+}
+
+.popup-body {
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(90vh - 150px);
+}
+
+/* Gallery Grid inside Popup */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-item {
+    background: var(--color-dark-wood);
+    border: 2px solid var(--color-copper);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition-fast);
+    height: 180px;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(62, 39, 35, 0.9);
+    padding: 0.5rem;
+    color: var(--color-light-cream);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* Project Info in Popup */
+.project-info {
+    background: rgba(62, 39, 35, 0.6);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-copper);
+    margin-top: 1rem;
+}
+
+.project-info h4 {
+    color: var(--color-accent-gold);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background: rgba(139, 69, 19, 0.6);
+    color: var(--color-accent-gold);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid var(--color-copper);
+}
+
+.popup-body {
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(90vh - 120px); /* Diperbarui karena footer dihapus */
+}
+
+/* Loading Animation for Popup */
+.gallery-loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--color-light-cream);
+}
+
+.loading-spinner {
+    border: 3px solid var(--color-copper);
+    border-top: 3px solid var(--color-accent-gold);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive for Popup */
+@media (max-width: 768px) {
+    .popup-container {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .gallery-item {
+        height: 150px;
+    }
+    
+    .popup-header h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+        /* Filter Controls */
+        .filter-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--color-accent-gold);
+            font-weight: 600;
+        }
+
+        .filter-select {
+            padding: 0.8rem 2.5rem 0.8rem 1.2rem;
+            background: rgba(62, 39, 35, 0.9);
+            border: 2px solid var(--color-copper);
+            border-radius: 8px;
+            color: var(--color-cream);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23D4A574" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.8rem center;
+            background-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .filter-select:hover {
+            border-color: var(--color-accent-gold);
+            box-shadow: 0 4px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--color-accent-gold);
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
+        }
+
+        .filter-select option {
+            background: var(--color-dark-wood);
+            color: var(--color-cream);
+        }
+
+        .project-count {
+            font-size: 0.95rem;
+            color: var(--color-light-cream);
+            font-style: italic;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: rgba(62, 39, 35, 0.9);
+            border: 3px solid var(--color-copper);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .project-card.fade-out {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .project-card.hidden {
+            display: none;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--color-primary-brown), var(--color-accent-gold), var(--color-primary-brown));
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(212, 165, 116, 0.4);
+        }
+
+        /* Thumbnail Styles */
+        .project-thumbnail {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            border-bottom: 3px solid var(--color-copper);
+            background: var(--color-dark-wood);
+        }
+
+        .project-thumbnail-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+
+        /* Placeholder backgrounds for different project types */
+        .project-card[data-category="data-analysis"] .project-thumbnail-inner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .project-card[data-category="web-development"] .project-thumbnail-inner {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        /* Vintage texture overlay on thumbnails */
+        img { max-width: 100%; height: auto; display: block; }
+.project-thumbnail-inner img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .project-thumbnail-inner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.1) 2px, rgba(0,0,0,.1) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.1) 2px, rgba(0,0,0,.1) 4px);
+            opacity: 0.3;
+        }
+
+        .project-thumbnail-icon {
+            font-size: 4rem;
+            z-index: 1;
+            transition: var(--transition-smooth);
+        }
+
+        .project-thumbnail-label {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            color: white;
+            z-index: 1;
+            margin-top: 1rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card:hover .project-thumbnail-inner {
+            transform: scale(1.1);
+        }
+
+        .project-card:hover .project-thumbnail-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        /* Thumbnail overlay */
+        .project-thumbnail::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(62, 39, 35, 0.3) 100%);
+            pointer-events: none;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-category {
+            display: inline-block;
+            padding: 0.4rem 0.9rem;
+            background: rgba(139, 69, 19, 0.6);
+            color: var(--color-accent-gold);
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--color-copper);
+        }
+
+        .project-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent-gold);
+        }
+
+        .project-card p {
+            color: var(--color-light-cream);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: var(--color-primary-brown);
+            color: var(--color-cream);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition-fast);
+            border: 2px solid var(--color-accent-gold);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .project-link:hover {
+            background: var(--color-accent-gold);
+            color: var(--color-dark-wood);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.5);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(92, 64, 51, 0.6);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid var(--color-copper);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent-gold);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(62, 39, 35, 0.8);
+            border: 2px solid var(--color-copper);
+            border-radius: 5px;
+            color: var(--color-cream);
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent-gold);
+            box-shadow: 0 0 10px rgba(212, 165, 116, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-primary-brown);
+            color: var(--color-cream);
+            border: 2px solid var(--color-accent-gold);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background: var(--color-accent-gold);
+            color: var(--color-dark-wood);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.5);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(139, 69, 19, 0.6);
+            color: var(--color-cream);
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid var(--color-copper);
+            transition: var(--transition-fast);
+            font-weight: 600;
+        }
+
+        .social-link:hover {
+            background: var(--color-accent-gold);
+            color: var(--color-dark-wood);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        /* Contact Form Improvements */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.8rem;
+    color: var(--color-accent-gold);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.label-icon {
+    font-size: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: rgba(62, 39, 35, 0.8);
+    border: 2px solid var(--color-copper);
+    border-radius: 8px;
+    color: var(--color-cream);
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
+    background: rgba(62, 39, 35, 0.9);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.6;
+    padding: 1.2rem;
+}
+
+/* Textarea khusus lebih besar */
+#message {
+    min-height: 180px;
+    font-size: 1.05rem;
+}
+
+.input-hint {
+    font-size: 0.85rem;
+    color: var(--color-light-cream);
+    opacity: 0.8;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.textarea-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: var(--color-accent-gold);
+    font-weight: 500;
+}
+
+.form-submit {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.submit-btn {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, var(--color-accent-gold), var(--color-burnt-orange));
+    color: var(--color-dark-wood);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 200px;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(212, 165, 116, 0.6);
+    background: linear-gradient(135deg, var(--color-burnt-orange), var(--color-accent-gold));
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+}
+
+.btn-text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-note {
+    margin-top: 1.2rem;
+    color: var(--color-light-cream);
+    opacity: 0.9;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.note-icon {
+    font-size: 1rem;
+}
+
+/* Loading state untuk button */
+.submit-btn.loading {
+    opacity: 0.8;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #C19A6B, #A0522D);
+}
+
+.submit-btn.success {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.submit-btn.error {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: rgba(250, 235, 215, 0.6);
+    font-size: 0.95rem;
+}
+
+/* Animasi untuk form */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-container form {
+    animation: slideUp 0.6s ease-out;
+}
+
+        /* Footer */
+        footer {
+            background: rgba(62, 39, 35, 0.95);
+            padding: 2rem;
+            text-align: center;
+            color: var(--color-light-cream);
+            border-top: 3px solid var(--color-copper);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                background: rgba(62, 39, 35, 0.98);
+                flex-direction: column;
+                padding: 5rem 2rem;
+                transition: var(--transition-smooth);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .about-content,
+            .contact-container {
+                padding: 2rem;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+        }
+
+
+        /* Lightbox Modal Styles */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 10, 5, 0.98);
+    overflow: hidden;
+}
+
+.lightbox-content {
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border: 3px solid var(--color-copper);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--color-accent-gold);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(62, 39, 35, 0.8);
+    border-radius: 50%;
+}
+
+.lightbox-close:hover {
+    color: var(--color-cream);
+    background: var(--color-accent-gold);
+    transform: scale(1.1);
+}
+
+.lightbox-caption {
+    color: var(--color-cream);
+    text-align: center;
+    padding: 15px 20px;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin-top: 20px;
+    background: rgba(62, 39, 35, 0.7);
+    border-radius: 5px;
+    border: 1px solid var(--color-copper);
+    max-width: 80%;
+}
+
+.lightbox-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    pointer-events: all;
+    background: rgba(62, 39, 35, 0.8);
+    color: var(--color-accent-gold);
+    border: 2px solid var(--color-copper);
+    font-size: 30px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border-radius: 5px;
+    margin: 0 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--color-accent-gold);
+    color: var(--color-dark-wood);
+    transform: scale(1.1);
+}
+
+/* Thumbnail click effect */
+.gallery-item {
+    cursor: pointer;
+}
+
+.gallery-item:hover::after {
+    content: '🔍 Klik untuk memperbesar';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(62, 39, 35, 0.9);
+    color: var(--color-accent-gold);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 80%;
+    border: 1px solid var(--color-copper);
+}
+
+/* Responsive lightbox */
+@media (max-width: 768px) {
+    .lightbox-content {
+        margin: 10% auto;
+        height: 80vh;
+        padding: 10px;
+    }
+    
+    .lightbox-image {
+        max-height: 60vh;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .lightbox-prev,
+    .lightbox-next {
+        font-size: 20px;
+        padding: 10px 15px;
+        margin: 0 10px;
+    }
+    
+    .lightbox-caption {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lightbox-content {
+        margin: 15% auto;
+        height: 70vh;
+    }
+    
+    .lightbox-image {
+        max-height: 50vh;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+<section id="hero">
+    <!-- Floating decorative elements -->
+    <div class="floating-element code">{ }</div>
+    <div class="floating-element chart">📊</div>
+    
+    <div class="hero-content">
+        <h1>Halo, Saya <br>ROFIQ ABDULLOH</h1>
+        <div class="subtitle">Data Analyst & Full-Stack Developer</div>
+        
+        <p class="tagline">
+            Mengubah data kompleks menjadi wawasan bisnis yang dapat ditindaklanjuti dan membangun solusi web yang skalabel untuk pertumbuhan UMKM.
+        </p>
+
+        <div class="cta-buttons">
+            <!-- Tombol Utama -->
+            <a href="#portfolio" class="btn btn-primary">
+                Lihat Portfolio
+            </a>
+            
+            <!-- Tombol Download CV Baru -->
+            <a href="cv-nama-anda.pdf" download class="btn btn-outline">
+                <span class="btn-icon">⬇</span> Download CV
+            </a>
+        </div>
+
+       
+    </div>
+</section>
+    
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="about-content">
+            <p>
+                Saya adalah seorang profesional yang berpengalaman dalam analisis data kuantitatif menggunakan bahasa pemrograman R, 
+                dengan kemampuan mendalam dalam membaca dan menginterpretasi scatterplot, chart, dan berbagai visualisasi data lainnya. 
+                Di sisi pengembangan web, saya menguasai teknologi frontend seperti HTML, CSS, JavaScript, Vue.js, dan React.js, 
+                serta backend dengan Express.js. Untuk pengelolaan database, saya berpengalaman dengan MySQL, Microsoft Access, MongoDB, 
+                dan Microsoft Excel. Kombinasi keterampilan analitik dan teknis ini memungkinkan saya untuk menghadirkan solusi 
+                yang komprehensif dan berbasis data.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Keahlian</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Analisis Kuantitatif &amp; Data Science</h3>
+                <ul class="skill-list">
+                    <li>R Programming</li>
+                    <li>Analisis Statistik</li>
+                    <li>Visualisasi Data</li>
+                    <li>Interpretasi Scatterplot &amp; Chart</li>
+                    <li>Metode Kuantitatif</li>
+                    <li>Dashboard Interaktif</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <ul class="skill-list">
+                    <li>HTML &amp; CSS</li>
+                    <li>JavaScript</li>
+                    <li>Vue.js</li>
+                    <li>React.js</li>
+                    <li>Express.js</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>Microsoft Access</li>
+                    <li>Microsoft Excel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="section-title">Hasil Karya &amp; Proyek</h2>
+        
+        <!-- Filter Controls -->
+        <div class="filter-container">
+            <label class="filter-label" for="categoryFilter">Filter Karya:</label>
+            <select id="categoryFilter" class="filter-select">
+                <option value="all">Semua Karya</option>
+                <option value="data-analysis">Analisis Data</option>
+                <option value="web-development">Pemrograman Web</option>
+                <option value="LandingPage">LandingPage</option>
+            </select>
+            <span class="project-count" id="projectCount">Menampilkan 6 karya</span>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Data Analysis Project 1 -->
+           <div class="project-card" data-category="data-analysis">
+                <div class="project-thumbnail">
+                    <div class="project-thumbnail-inner"><img src="weather-business-fixed/tumb_weater.png" alt="">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Analisis Data</span>
+                    <h3>Proyek Analisis Data</h3>
+                    <p>Studi statistik dengan metode kuantitatif dan interpretasi data mendalam untuk pengambilan keputusan berbasis bukti.</p>
+                    <a href="weather-business-fixed/weather_business_december.html" class="project-link">Lihat Proyek</a>
+                </div>
+            </div>
+
+            <!-- Data Analysis Project 2 -->
+            <div class="project-card" data-category="data-analysis">
+                <div class="project-thumbnail">
+                    <div class="project-thumbnail-inner"><img src="analis_property/tumb_property.png" alt="">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Analisis Data</span>
+                    <h3>Proyek Analisis Data</h3>
+                    <p>Studi statistik dengan metode kuantitatif dan interpretasi data mendalam untuk pengambilan keputusan berbasis bukti.</p>
+                    <a href="analis_property/analis_property.html" class="project-link">Lihat Proyek</a>
+                </div>
+            </div>
+
+            <!-- Data Analysis Project 3 -->
+            <div class="project-card" data-category="data-analysis">
+                <div class="project-thumbnail">
+                    <div class="project-thumbnail-inner"><img src="Customer Churn Prediction ML/tubm_curn.png" alt="">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Analisis Data</span>
+                    <h3>Customer Churn Prediction ML</h3>
+                    <p>Predictive model dengan 80% accuracy untuk identifikasi 
+                        pelanggan berisiko churn. ROI 186,567% | 3.2 hari payback.</p>
+                    <a href="Customer Churn Prediction ML/landingpage_phurn_prediction.html" class="project-link">Lihat Proyek</a>
+                </div>
+            </div>
+
+            
+<!-- Web Development Project 1 -->
+
+<div class="project-card" data-category="web-development">
+    <div class="project-thumbnail">
+        <div class="project-thumbnail-inner">
+            <img src="web-development/project3/Screenshot_1.webp" alt="Sistem Manajemen Inventori">
+        </div>
+    </div>
+    <div class="project-content">
+        <span class="project-category">Pemrograman Web</span>
+        <h3>Edukasi Astronomi Berbasis Web</h3>
+        <p>Aplikasi berbasis web yang dirancang untuk mengajar dan mengembangkan pemahaman tentang astronomi.</p>
+        <button class="project-link web-dev-popup-btn" 
+                data-project="web1"
+                data-title="Aplikasi Web Edukasi Astronomi"
+                data-description="Platform edukasi antariksa berbasis web yang menyajikan konten astronomi interaktif dengan integrasi data NASA real-time. Sistem ini menghadirkan visualisasi 3D tata surya, informasi planet terkini, materi pembelajaran terstruktur, dan kuis edukatif dalam antarmuka yang responsif dan menarik. Dirancang khusus untuk meningkatkan literasi sains antariksa di Indonesia dengan pendekatan belajar yang menyenangkan dan mudah diakses."
+                data-tech="React.js,Vite,Tailwind,JavaScript,NASA Open APIs,Gemini Open APIs"
+                data-screenshots='[
+                "web-development/project3/screenshot_1.webp","web-development/project3/screenshot_2.webp","web-development/project3/screenshot_3.webp","web-development/project3/screenshot_4.webp","web-development/project3/screenshot_5.webp","web-development/project3/screenshot_6.webp","web-development/project3/screenshot_7.webp","web-development/project3/screenshot_8.webp","web-development/project3/screenshot_9.webp","web-development/project3/screenshot_10.webp","web-development/project3/screenshot_11.webp","web-development/project3/screenshot_12.webp","web-development/project3/screenshot_13.webp","web-development/project3/screenshot_14.webp","web-development/project3/screenshot_15.webp","web-development/project3/screenshot_16.webp"]'
+                data-captions='["Hero Section","Daily-Image","Fun-Facts","Page-Footer","Solar-System 3D","Planet-Detail","Space-Tech","Space-Tech","Mission-Tracker","Info-Mission","Photo-Gallery","Education-Hub","Sky-Monitor","Star-Guide","Games","AI-Chatbot"]'>
+            Lihat Screenshots
+        </button>
+    </div>
+</div>
+
+<!-- Web Development Project 3 -->
+<div class="project-card" data-category="web-development">
+    <div class="project-thumbnail">
+        <div class="project-thumbnail-inner">
+            <img src="web-development/project1/thumbnail.webp" alt="Dashboard Admin Full-Stack">
+        </div>
+    </div>
+    <div class="project-content">
+        <span class="project-category">Pemrograman Web</span>
+        <h3>Dashboard Admin Full-Stack</h3>
+        <p>Aplikasi web full-stack dengan React.js frontend dan Express.js backend untuk manajemen data.</p>
+        <button class="project-link web-dev-popup-btn" 
+                data-project="web2"
+                data-title="Dashboard Admin Full-Stack"
+                data-description="Aplikasi web full-stack dengan React.js frontend dan Express.js backend untuk manajemen data."
+                data-tech="React.js,Express.js,Node.js,MongoDB"
+                data-screenshots='["web-development/project1/screenshot1.webp","web-development/project1/screenshot2.webp","web-development/project1/screenshot3.webp","web-development/project1/screenshot4.webp"]'
+                data-captions='["Dashboard Overview","User Management","receipt","Manage Product"]'>
+            Lihat Screenshots
+        </button>
+    </div>
+</div>
+
+<!-- Web Development Project 3 -->
+<div class="project-card" data-category="web-development">
+    <div class="project-thumbnail">
+        <div class="project-thumbnail-inner">
+            <img src="web-development/project2/1.webp" alt="E-commerce Vue.js & MongoDB">
+        </div>
+    </div>
+    <div class="project-content">
+        <span class="project-category">Pemrograman Web</span>
+        <h3>Sistem Managemen WareHouse Baju</h3>
+        <p>Aplikasi berbasis Website dengan JavaScript untuk Backend, tailwind untuk Frontend dan MySQL untuk database </p>
+        <button class="project-link web-dev-popup-btn" 
+                data-project="web3"
+                data-title="Aplikasi WareHouse Full-Stack"
+                data-description="Aplikasi web Fullstack yang dirancang khusus untuk mendigitalkan operasional pabrik pakaian (konveksi). Sistem ini menangani siklus produksi end-to-end, mulai dari manajemen stok bahan baku (kain/benang), pelacakan proses produksi, hingga penjualan barang jadi. Dibangun dengan fokus pada efisiensi dan kemudahan penggunaan untuk memantau arus barang dan kesehatan finansial bisnis secara real-time."
+                data-tech="JavaScript,tailwind,MySQL,JWT Authentication"
+                data-screenshots='["web-development/project2/1.webp","web-development/project2/2.webp","web-development/project2/3.webp","web-development/project2/4.webp","web-development/project2/5.webp","web-development/project2/6.webp","web-development/project2/7.webp","web-development/project2/8.webp","web-development/project2/9.webp"]'
+                data-captions='["Dashboard","Manajemen Produk","Manajemen Bahan Bakut","Manajemen Supplier","Report Keuangan","Manajemen Kategori","Monitoring Stok","Laporan Gudang","Server Berjalan"]'>
+            Lihat Screenshots
+        </button>
+    </div>
+</div>
+
+
+            <!-- LandingPage 01-->
+            <div class="project-card" data-category="LandingPage">
+                <div class="project-thumbnail">
+                    <div class="project-thumbnail-inner"><img src="LandingPage/barbertumb.jpg" alt="">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">LandingPage</span>
+                    <h3>Bray Barber site</h3>
+                    <p>Halaman penjualan produk yang dirancang untuk meningkatkan konversi, dilengkapi dengan product showcase, testimonial pelanggan, dan call-to-action yang efektif</p>
+                    <a href="https://barber-site-eta.vercel.app/" class="project-link">Lihat Proyek</a>
+                </div>
+            </div>
+
+            <!-- LandingPage 02-->
+            <div class="project-card" data-category="LandingPage">
+                <div class="project-thumbnail">
+                    <div class="project-thumbnail-inner"><img src="LandingPage/Beauty Of Angel/tumbb.jpg" alt="">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">LandingPage</span>
+                    <h3>Beauty Of Angel Collagen Toner</h3>
+                    <p>Halaman penjualan produk yang dirancang untuk meningkatkan konversi, dilengkapi dengan product showcase, testimonial pelanggan, dan call-to-action yang efektif</p>
+                    <a href="LandingPage/Beauty Of Angel/lp_Beauty_of_Angel.html" class="project-link">Lihat Proyek</a>
+                </div>
+            </div>
+
+            <!-- LandingPage 03-->
+            <div class="project-card" data-category="LandingPage">
+                <div class="project-thumbnail">
+                    <div class="project-thumbnail-inner">
+                        <img src="LandingPage/EyeCling/Screenshot_1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">LandingPage</span>
+                    <h3>EyeCling 
+                        <br>Madu Ekstra Bilberry</h3>
+                    <p>Halaman penjualan produk yang dirancang untuk meningkatkan konversi, dilengkapi dengan product showcase, testimonial pelanggan, dan call-to-action yang efektif</p>
+                    <a href="LandingPage/EyeCling/lp_EyeCling.html" class="project-link">Lihat Proyek</a>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <!-- Grid untuk 2 kolom di desktop -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">
+                            <span class="label-icon">👤</span> Nama Lengkap
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">
+                            <span class="label-icon">✉️</span> Alamat Email
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                        <div class="input-hint">Email aktif yang bisa dihubungi</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">
+                        <span class="label-icon">📌</span> Subjek Pesan
+                    </label>
+                    <input type="text" id="subject" name="subject" placeholder="Tentang apa pesan Anda?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">
+                        <span class="label-icon">💬</span> Isi Pesan
+                    </label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tulis pesan Anda secara lengkap di sini..." required></textarea>
+                    <div class="textarea-info">
+                        <span class="char-count">0/1000 karakter</span>
+                    </div>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-icon">📤</span>
+                        <span class="btn-text">Kirim Pesan</span>
+                    </button>
+                    <!-- <p class="form-note">
+                        <span class="note-icon">⏱️</span> 
+                        Biasanya saya membalas dalam 1x24 jam
+                    </p> -->
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ROFIQ ABDULLOH. Dibuat dengan ❤️ dan kode.</p>
+    </footer>
+
+    <!-- Popup Gallery for Web Development Projects -->
+<div id="webPopup" class="popup-overlay">
+    <div class="popup-container">
+        <div class="popup-header">
+            <h3 id="popupTitle">Project Title</h3>
+            <button class="popup-close" id="popupClose">&times;</button>
+        </div>
+        <div class="popup-body">
+            <div id="popupGallery" class="gallery-grid">
+                <!-- Screenshot items will be added here dynamically -->
+            </div>
+            <div id="popupInfo" class="project-info">
+                <!-- Project info will be added here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-content">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-navigation">
+            <button class="lightbox-prev">❮</button>
+            <button class="lightbox-next">❯</button>
+        </div>
+    </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+    // Smooth Scroll & Active Navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const navLinksContainer = document.getElementById('navLinks');
+
+    // Sticky Navigation
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        // Active Navigation
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Hamburger Menu
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinksContainer.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinksContainer.classList.remove('active');
+        });
+    });
+
+    // Intersection Observer for Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        if (section.id !== 'home') {
+            observer.observe(section);
+        }
+    });
+
+    // Parallax Effect for Hero
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+        }
+    });
+
+    // Portfolio Filter Functionality
+    const categoryFilter = document.getElementById('categoryFilter');
+    const portfolioGrid = document.getElementById('portfolioGrid');
+    const projectCards = document.querySelectorAll('.project-card');
+    const projectCount = document.getElementById('projectCount');
+
+    // Function to update project count
+    function updateProjectCount(count) {
+        projectCount.textContent = `Menampilkan ${count} karya`;
+    }
+
+    // Function to filter projects
+    function filterProjects(category) {
+        let visibleCount = 0;
+
+        // First, fade out all cards
+        projectCards.forEach(card => {
+            card.classList.add('fade-out');
+        });
+
+        // Wait for fade out animation, then filter
+        setTimeout(() => {
+            projectCards.forEach((card, index) => {
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (category === 'all' || cardCategory === category) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                    
+                    // Stagger the fade in animation
+                    setTimeout(() => {
+                        card.classList.remove('fade-out');
+                    }, index * 50);
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+            
+            // Update count after filtering
+            updateProjectCount(visibleCount);
+        }, 300);
+    }
+
+    // Event listener for filter dropdown
+    categoryFilter.addEventListener('change', (e) => {
+        const selectedCategory = e.target.value;
+        filterProjects(selectedCategory);
+    });
+
+    // Initialize with all projects visible
+    updateProjectCount(projectCards.length);
+
+    // Popup Gallery for Web Development Projects
+    const webPopup = document.getElementById('webPopup');
+    const popupClose = document.getElementById('popupClose');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupGallery = document.getElementById('popupGallery');
+    const popupInfo = document.getElementById('popupInfo');
+    const webDevButtons = document.querySelectorAll('.web-dev-popup-btn');
+
+    // Function to show popup
+    function showWebDevPopup(button) {
+        // Get project data from button attributes
+        const title = button.getAttribute('data-title');
+        const description = button.getAttribute('data-description');
+        const tech = button.getAttribute('data-tech');
+        const screenshots = JSON.parse(button.getAttribute('data-screenshots') || '[]');
+        const captions = JSON.parse(button.getAttribute('data-captions') || '[]');
+        
+        // Set popup content
+        popupTitle.textContent = title;
+        
+        // Clear previous gallery items
+        popupGallery.innerHTML = '';
+        
+        // Add screenshots to gallery
+        if (screenshots.length > 0) {
+            screenshots.forEach((screenshot, index) => {
+                const caption = captions[index] || `Screenshot ${index + 1}`;
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                galleryItem.innerHTML = `
+                    <img src="${screenshot}" alt="${caption}" loading="lazy">
+                    <div class="gallery-caption">${caption}</div>
+                `;
+                popupGallery.appendChild(galleryItem);
+            });
+        } else {
+            popupGallery.innerHTML = `
+                <div class="gallery-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Memuat screenshots...</p>
+                </div>
+            `;
+        }
+        
+        // Set project info
+        const techTags = tech.split(',').map(tech => `<span class="tech-tag">${tech.trim()}</span>`).join('');
+        
+        popupInfo.innerHTML = `
+            <h4>Deskripsi Proyek</h4>
+            <p>${description}</p>
+            <h4>Teknologi yang Digunakan</h4>
+            <div class="tech-stack">
+                ${techTags}
+            </div>
+        `;
+        
+        // Show popup
+        webPopup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to hide popup
+    function hideWebDevPopup() {
+        webPopup.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Event listeners for web development buttons
+    webDevButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showWebDevPopup(button);
+        });
+    });
+
+    // Event listener for close button
+    popupClose.addEventListener('click', hideWebDevPopup);
+
+    // Close popup when clicking outside
+    webPopup.addEventListener('click', (e) => {
+        if (e.target === webPopup) {
+            hideWebDevPopup();
+        }
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && webPopup.classList.contains('active')) {
+            hideWebDevPopup();
+        }
+    });
+
+    // Lightbox functionality
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+
+    let currentGallery = [];
+    let currentIndex = 0;
+
+    // Function to open lightbox
+    function openLightbox(imageSrc, caption, galleryImages, clickedIndex) {
+        lightboxImage.src = imageSrc;
+        lightboxCaption.textContent = caption;
+        lightboxModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        
+        // Store current gallery info
+        currentGallery = galleryImages;
+        currentIndex = clickedIndex;
+    }
+
+    // Function to close lightbox
+    function closeLightbox() {
+        lightboxModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Function to navigate to next image
+    function nextImage() {
+        if (currentGallery.length === 0) return;
+        
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        const nextItem = currentGallery[currentIndex];
+        
+        lightboxImage.src = nextItem.src;
+        lightboxCaption.textContent = nextItem.caption;
+    }
+
+    // Function to navigate to previous image
+    function prevImage() {
+        if (currentGallery.length === 0) return;
+        
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        const prevItem = currentGallery[currentIndex];
+        
+        lightboxImage.src = prevItem.src;
+        lightboxCaption.textContent = prevItem.caption;
+    }
+
+    // Event listener untuk close lightbox
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    // Event listener untuk klik di luar gambar untuk menutup
+    lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) {
+            closeLightbox();
+        }
+    });
+
+    // Event listener untuk tombol keyboard
+    document.addEventListener('keydown', (e) => {
+        if (lightboxModal.style.display === 'block') {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            }
+        }
+    });
+
+    // Event listener untuk tombol navigasi
+    lightboxPrev.addEventListener('click', prevImage);
+    lightboxNext.addEventListener('click', nextImage);
+
+    // Modify the showWebDevPopup function to add click event to gallery items
+    function addLightboxFunctionality() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const galleryImages = [];
+        
+        galleryItems.forEach((item, index) => {
+            const img = item.querySelector('img');
+            const caption = item.querySelector('.gallery-caption');
+            
+            if (img) {
+                const galleryItem = {
+                    src: img.src,
+                    caption: caption ? caption.textContent : `Screenshot ${index + 1}`
+                };
+                galleryImages.push(galleryItem);
+                
+                // Add click event to each gallery item
+                item.addEventListener('click', () => {
+                    openLightbox(img.src, galleryItem.caption, galleryImages, index);
+                });
+            }
+        });
+    }
+
+    // Update showWebDevPopup function to call addLightboxFunctionality
+    const originalShowWebDevPopup = showWebDevPopup;
+
+    showWebDevPopup = function(button) {
+        originalShowWebDevPopup(button);
+        
+        // Add lightbox functionality after a short delay to ensure gallery is rendered
+        setTimeout(addLightboxFunctionality, 100);
+    };
+
+    //Emailjs
+    (function(){
+    emailjs.init("VlRbbBAD28GQ_7N8I");
+    console.log("✅ EmailJS initialized");
+})();
+
+window.onload = function(){
+    const form = document.getElementById("contactForm");
+    
+    if (!form) {
+        console.error("Form tidak ditemukan!");
+        return;
+    }
+    
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        // Ambil data
+        const templateParams = {
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            title: document.getElementById("subject").value.trim(),
+            message: document.getElementById("message").value.trim()
+        };
+        
+        // Validasi
+        if (!templateParams.name || !templateParams.email || !templateParams.message) {
+            showAlert("⚠️ Harap isi nama, email, dan pesan!", "warning");
+            return;
+        }
+        
+        // Validasi email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(templateParams.email)) {
+            showAlert("📧 Format email tidak valid!", "warning");
+            return;
+        }
+        
+        // Tampilkan loading
+        const submitBtn = event.target.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = '⏳ Mengirim...';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        
+        emailjs.send("service_1arnj6w", "template_rr1hzqk", templateParams)
+        .then(function(response) {
+            console.log("✅ Sukses:", response.status, response.text);
+            
+            // Tampilkan alert sukses yang lebih baik
+            showAlert("🎉 Pesan berhasil dikirim! Saya akan membalas segera.", "success");
+            
+            // Reset form
+            form.reset();
+            
+            // Tampilkan efek sukses di button
+            submitBtn.textContent = '✓ Terkirim!';
+            submitBtn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            submitBtn.style.borderColor = '#4CAF50';
+            
+            // Reset button setelah 3 detik
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+                submitBtn.style.borderColor = '';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            }, 3000);
+            
+        }, function(error) {
+            console.error("❌ Gagal:", error);
+            
+            // Tampilkan alert error yang informatif
+            let errorMessage = "❌ Gagal mengirim pesan.\n";
+            
+            if (error.text) {
+                if (error.text.includes('Invalid template')) {
+                    errorMessage += "Template ID mungkin salah.";
+                } else if (error.text.includes('Invalid service')) {
+                    errorMessage += "Service belum terhubung ke email.";
+                } else {
+                    errorMessage += "Error: " + error.text;
+                }
+            } else {
+                errorMessage += "Silakan coba lagi nanti.";
+            }
+            
+            showAlert(errorMessage, "error");
+            
+            // Tampilkan button error state
+            submitBtn.textContent = '❌ Coba Lagi';
+            submitBtn.style.background = 'linear-gradient(135deg, #ff6b6b, #ee5a52)';
+            submitBtn.style.borderColor = '#ff6b6b';
+            
+            // Reset button setelah 3 detik
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+                submitBtn.style.borderColor = '';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            }, 3000);
+        });
+    });
+    
+    // Fungsi untuk menampilkan alert yang lebih baik
+    function showAlert(message, type = "info") {
+        // Hapus alert sebelumnya jika ada
+        const existingAlert = document.querySelector('.custom-alert');
+        if (existingAlert) existingAlert.remove();
+        
+        // Buat element alert
+        const alert = document.createElement('div');
+        alert.className = `custom-alert alert-${type}`;
+        alert.innerHTML = `
+            <div class="alert-content">
+                <span class="alert-icon">${getIcon(type)}</span>
+                <span class="alert-message">${message}</span>
+                <button class="alert-close" onclick="this.parentElement.parentElement.remove()">×</button>
+            </div>
+        `;
+        
+        // Tambahkan ke body
+        document.body.appendChild(alert);
+        
+        // Tampilkan dengan animasi
+        setTimeout(() => alert.classList.add('show'), 10);
+        
+        // Auto remove setelah 5 detik untuk success/info, 8 detik untuk error/warning
+        const duration = type === 'error' || type === 'warning' ? 8000 : 5000;
+        setTimeout(() => {
+            if (alert.parentElement) {
+                alert.classList.remove('show');
+                setTimeout(() => alert.remove(), 300);
+            }
+        }, duration);
+    }
+    
+    function getIcon(type) {
+        switch(type) {
+            case 'success': return '✅';
+            case 'error': return '❌';
+            case 'warning': return '⚠️';
+            default: return 'ℹ️';
+        }
+    }
+};
+
+</script>
+</body>
+</html>
